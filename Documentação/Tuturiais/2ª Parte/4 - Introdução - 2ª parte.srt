@@ -1,0 +1,52 @@
+1
+00:00:00,777 --> 00:00:01,412
+Olá!
+
+2
+00:00:01,714 --> 00:00:03,543
+Vamos passar à 2ª parte dos tutoriais sobre a utilização do componente gráfico fornecido.
+
+3
+00:00:03,543 --> 00:00:05,991
+Relembramos que o painel tem uma grelha (essa grelha é o componente - GridPanel).
+
+4
+00:00:05,991 --> 00:00:07,975
+Em cada posição da grelha podemos ter ou não um peixe.
+
+5
+00:00:07,975 --> 00:00:09,871
+Um peixe movimenta-se aleatoriamente mas apenas na diagonal.
+
+6
+00:00:09,871 --> 00:00:12,304
+As novas funcionalidades são descritas de seguida.
+
+7
+00:00:12,544 --> 00:00:15,649
+Um peixe é capturado (colocado num aquário) quando se clica em cima dele com o rato.
+
+8
+00:00:15,976 --> 00:00:18,214
+Um peixe capturado fica parado (já não se desloca aleatoriamente)
+
+9
+00:00:18,214 --> 00:00:22,712
+e apenas pode ser movimentado se for arrastado (com o rato) para uma posição adjacente na diagonal.
+
+10
+00:00:22,961 --> 00:00:29,522
+Um peixe capturado liberta-se se passarem 10 segundos sem ser movimentado.
+
+11
+00:00:30,849 --> 00:00:35,022
+Consideraremos que a nossa aplicação fica concluída quando todos os peixes forem capturados.
+
+12
+00:00:00,000 --> 00:00:00,000
+Consideraremos que a nossa aplicação fica concluída quando todos os peixes forem capturados.
+
+13
+00:00:00,000 --> 00:00:00,000
+Consideraremos que a nossa aplicação fica concluída quando todos os peixes forem capturados.
+

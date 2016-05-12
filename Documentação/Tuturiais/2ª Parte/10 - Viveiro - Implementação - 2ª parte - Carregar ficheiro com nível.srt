@@ -1,0 +1,76 @@
+1
+00:00:01,469 --> 00:00:04,027
+E se carregássemos o nível a partir de um ficheiro de texto?
+
+2
+00:00:04,779 --> 00:00:09,914
+Podemos apagar o código anterior que criava aquários e peixes.
+
+3
+00:00:10,263 --> 00:00:19,571
+E definimos um método para carregar o ficheiro com o nível.
+
+4
+00:00:21,868 --> 00:00:39,954
+Vamos utilizar a classe FileHandler, incluída no componente fornecido, para ajudar a ler o ficheiro de texto.
+
+5
+00:00:41,134 --> 00:01:06,914
+Indicamos o nome do ficheiro e usando o método readFile lemos todo o conteúdo para um String.
+
+6
+00:01:07,920 --> 00:01:21,820
+Num ciclo for percorremos todas as linhas do ficheiro.
+
+7
+00:01:25,431 --> 00:01:54,258
+Separamos as linhas por colunas (cada coluna tem 2 carateres).
+
+8
+00:01:55,401 --> 00:02:18,297
+Percorremos todas as colunas da linha
+
+9
+00:02:26,854 --> 00:05:22,852
+Caso o 2º carater seja "A" (AQUARIO) adicionamos um peixe capturado.
+
+10
+00:05:24,711 --> 00:06:26,556
+E se o 1º carater for "P" (PEIXE) adicionamos um peixe livre nessa posição.
+
+11
+00:06:31,602 --> 00:06:52,750
+Criamos a package "niveis".
+
+12
+00:06:55,758 --> 00:07:22,148
+Definimos um ficheiro de texto e como formato vamos assumir 2 letras para cada posição da grelha.
+
+13
+00:07:22,497 --> 00:07:25,028
+Se for 00 é uma posição vazia
+
+14
+00:07:25,337 --> 00:07:28,280
+Se for A0 tem um peixe livre
+
+15
+00:07:28,637 --> 00:07:37,937
+Se for AP tem um peixe capturado
+
+16
+00:07:38,228 --> 00:07:54,382
+Vamos fazer uma grelha 5x5 tal como definido no GridPanel.
+
+17
+00:08:10,574 --> 00:08:14,228
+Fantástico :)
+
+18
+00:08:14,603 --> 00:08:20,320
+Agora, mãos à obra!
+
+19
+00:00:00,000 --> 00:00:00,000
+Agora, mãos à obra!
+

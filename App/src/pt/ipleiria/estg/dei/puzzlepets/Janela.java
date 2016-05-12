@@ -12,9 +12,10 @@ import java.awt.Window.Type;
 
 public class Janela extends JFrame {
 	
-	private PainelMovimentos painelMovimentos;
+	
 
 	private JPanel contentPane;
+	private Thread threadIteracao;
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
@@ -25,8 +26,7 @@ public class Janela extends JFrame {
 					e.printStackTrace();
 				}
 			}
-		});
-		
+		});	
 		
 	}
 
@@ -35,8 +35,6 @@ public class Janela extends JFrame {
 	 * Create the frame.
 	 */
 	public Janela() {
-		setType(Type.UTILITY);
-		setResizable(false);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 1024, 1024);
 		contentPane = new JPanel();
@@ -46,7 +44,6 @@ public class Janela extends JFrame {
 		
 		/*Criação dos paineis*/
 		
-		painelMovimentos = new PainelMovimentos();
 		
 		JBackgroundPanel backgroundPanel = new JBackgroundPanel();
 		backgroundPanel.setBackgroundImage("/imagens/fundos/fundo0.png");
@@ -57,41 +54,59 @@ public class Janela extends JFrame {
 		gridPainelPrincipal.setNumberOfRows(8);
 		gridPainelPrincipal.setNumberOfColumns(8);
 		gridPainelPrincipal.setShowGridLines(true);
-		backgroundPanel.add(gridPainelPrincipal, BorderLayout.CENTER);
-		
-		JPanel panel = new JPanel();
-		backgroundPanel.add(panel, BorderLayout.NORTH);
-		panel.setLayout(new BorderLayout(0, 0));
-		panel.setOpaque(false);
+		backgroundPanel.add(gridPainelPrincipal, BorderLayout.SOUTH);
 		
 		GridPanel gridPainelMacas = new GridPanel();
+		gridPainelMacas.setRowSize(126);
+		gridPainelMacas.setColumnSize(252);
+		gridPainelMacas.setShowGridLines(true);
 		gridPainelMacas.setNumberOfRows(1);
 		gridPainelMacas.setNumberOfColumns(1);
-		gridPainelMacas.setShowGridLines(true);
-		panel.add(gridPainelMacas, BorderLayout.WEST);
+		backgroundPanel.add(gridPainelMacas, BorderLayout.WEST);
 		
-		GridPanel gridPainelMovimentosComEstrelas = new GridPanel();
-		gridPainelMovimentosComEstrelas.setNumberOfRows(1);
-		gridPainelMovimentosComEstrelas.setNumberOfColumns(1);
-		gridPainelMovimentosComEstrelas.setShowGridLines(true);		
-		panel.add(gridPainelMovimentosComEstrelas, BorderLayout.CENTER);
 		
-		adicionarPainelMovimentos(painelMovimentos);
+		
+		GridPanel gridPainelMovimentosEstrelas = new GridPanel();
+		gridPainelMovimentosEstrelas.setRowSize(153);
+		gridPainelMovimentosEstrelas.setColumnSize(230);
+		gridPainelMovimentosEstrelas.setShowGridLines(true);
+		gridPainelMovimentosEstrelas.setNumberOfRows(1);
+		gridPainelMovimentosEstrelas.setNumberOfColumns(1);
+		backgroundPanel.add(gridPainelMovimentosEstrelas, BorderLayout.CENTER);
 		
 		GridPanel gridPainelPontuacao = new GridPanel();
+		gridPainelPontuacao.setRowSize(126);
+		gridPainelPontuacao.setColumnSize(252);
+		gridPainelPontuacao.setShowGridLines(true);
 		gridPainelPontuacao.setNumberOfRows(1);
 		gridPainelPontuacao.setNumberOfColumns(1);
-		gridPainelPontuacao.setShowGridLines(true);
-		panel.add(gridPainelPontuacao, BorderLayout.EAST);
+		backgroundPanel.add(gridPainelPontuacao, BorderLayout.EAST);
+
+		
+		Jogo jogo = new Jogo(gridPainelPrincipal, gridPainelMacas, gridPainelPontuacao, gridPainelMovimentosEstrelas);
+		
+		threadIteracao = new Thread(){			
+				public void run() {					
+				while (true) {
+					
+						try {
+							jogo.iterar(System.currentTimeMillis());
+							System.out.println("ITERAÇÃO");
+							sleep(1000);
+						} catch (InterruptedException e) {
+							// TODO Auto-generated catch block
+							e.printStackTrace();
+						}
+					
+					
+				}
+			}
+		};
+		
+		threadIteracao.start();
 		
 	}
 
-
-	private void adicionarPainelMovimentos(PainelMovimentos painelMovimentos2) {
-		// TODO Auto-generated method stub
-		
-	}
-	
 	
 
 }

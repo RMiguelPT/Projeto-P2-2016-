@@ -1,0 +1,48 @@
+1
+00:00:01,094 --> 00:00:02,201
+A classe Painel...
+
+2
+00:00:03,127 --> 00:00:25,782
+será constituída por um GridPanel e uma matriz de peixes.
+
+3
+00:00:26,963 --> 00:00:38,072
+O construtor recebe o GridPanel
+
+4
+00:00:39,173 --> 00:01:23,561
+define a dimensão da matriz
+
+5
+00:01:25,684 --> 00:02:02,170
+e nela são adicionados alguns peixes.
+
+6
+00:02:03,110 --> 00:02:07,918
+definimos o método adicionar(Peixe).
+
+7
+00:02:59,284 --> 00:03:05,011
+No construtor chamamos o método iniciar para colocar as imagens dos peixes no gridPanel.
+
+8
+00:03:06,353 --> 00:05:02,184
+Implementamos esse método iniciar que, por sua vez, necessita do método atualizar.
+
+9
+00:06:13,185 --> 00:06:47,221
+Para podemos testar, temos de criar um objeto Painel no construtor da JanelaViveiro.
+
+10
+00:06:51,805 --> 00:06:54,798
+Vejamos como fica…
+
+11
+00:07:31,699 --> 00:07:34,303
+Fish…:)
+
+12
+00:00:00,000 --> 00:00:00,000
+Fish…:)
+

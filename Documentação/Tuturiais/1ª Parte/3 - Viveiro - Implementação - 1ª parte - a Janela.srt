@@ -1,0 +1,92 @@
+1
+00:00:01,016 --> 00:00:12,998
+Vamos começar por criar um projeto no eclipse designado por "Viveiro".
+
+2
+00:00:20,201 --> 00:00:22,574
+De seguida vamos construir a parte gráfica.
+
+3
+00:00:23,090 --> 00:00:30,360
+Criamos uma classe especial (baseada na JFrame) que será também a classe principal da aplicação.
+
+4
+00:00:31,352 --> 00:00:46,784
+Vamos designá-la por "JanelaViveiro" e colocá-la na package “pt.ipleiria.estg.dei.viveiro”.
+
+5
+00:01:00,292 --> 00:01:04,705
+Como se pode ver, esta classe estende de JFrame que, de uma forma simplista, é um componente gráfico com um título e um painel (JPanel).
+
+6
+00:01:05,125 --> 00:01:07,157
+Como se pode verificar, é gerado código.
+
+7
+00:01:07,447 --> 00:01:09,420
+Nomeadamente, o construtor e o método "main".
+
+8
+00:01:09,760 --> 00:01:11,933
+Esta classe pode ser editada em modo "Source" ou em modo "Design".
+
+9
+00:01:12,494 --> 00:01:24,905
+Vamos ao modo de Design para atribuirmos um título à janela.
+
+10
+00:01:26,296 --> 00:01:38,060
+Podemos executar para ver como fica.
+
+11
+00:01:38,797 --> 00:01:43,732
+Vamos, agora, incluir o componente na nossa aplicação.
+
+12
+00:01:44,181 --> 00:01:52,331
+Primeiro arrastamos o ficheiro “GridPanel2016.jar” para dentro do projeto.
+
+13
+00:01:53,340 --> 00:02:12,120
+Depois, temos de alterar as propriedades do projeto indicando que iremos utilizar essa biblioteca.
+
+14
+00:02:14,105 --> 00:02:16,654
+Clicamos no botão "Choose component"
+
+15
+00:02:17,105 --> 00:02:34,713
+e selecionamos o "JBackgroundPanel" (dá sempre erro da 1ª vez).
+
+16
+00:02:35,768 --> 00:02:41,149
+Esta parte do componente vai servir para colocarmos um fundo na Janela.
+
+17
+00:02:41,699 --> 00:02:53,368
+Copiamos para dentro da pasta src do projeto as imagens que iremos usar.
+
+18
+00:02:56,430 --> 00:03:07,120
+Atribuímos à propriedade “backgroundImage” o valor “/imagens/fundo.jpg”.
+
+19
+00:03:08,548 --> 00:03:14,229
+Alteramos o Layout do Painel para BorderLayout (que define 5 zonas: centro, norte, sul, este e oeste).
+
+20
+00:03:15,400 --> 00:03:25,619
+Vamos acrescentar agora, no centro, uma grelha (GridPanel) onde os peixes se podem movimentar.
+
+21
+00:03:26,950 --> 00:03:38,540
+Ativamos a propriedade showGridLines e definimos que a grelha terá 5 linhas por 5 colunas (por omissão estava 9x7).
+
+22
+00:03:39,370 --> 00:03:50,482
+Verificamos que está a ficar bonito :)
+
+23
+00:00:00,000 --> 00:00:00,000
+Verificamos que está a ficar bonito :)
+

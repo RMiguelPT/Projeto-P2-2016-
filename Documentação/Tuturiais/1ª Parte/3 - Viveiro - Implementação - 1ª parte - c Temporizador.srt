@@ -1,0 +1,28 @@
+1
+00:00:00,854 --> 00:00:03,305
+Passamos para a classe Temporizador que tem...
+
+2
+00:00:03,916 --> 00:00:09,711
+Um int para o intervalo
+
+3
+00:00:10,594 --> 00:00:17,257
+Um long para o proximoTempo.
+
+4
+00:00:19,650 --> 00:00:30,402
+Criamos o construtor
+
+5
+00:00:32,823 --> 00:01:10,148
+Que obriga a criar o método reiniciar.
+
+6
+00:01:10,963 --> 00:02:23,683
+De seguida, implementamos os métodos getMilissegundosEmFalta e getSegundosEmFalta.
+
+7
+00:00:00,000 --> 00:00:00,000
+De seguida, implementamos os métodos getMilissegundosEmFalta e getSegundosEmFalta.
+

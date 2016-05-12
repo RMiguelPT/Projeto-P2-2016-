@@ -1,0 +1,52 @@
+1
+00:00:00,840 --> 00:00:04,574
+De seguida, vamos implementar as classes do modelo: Painel, Peixe, Posicao e Temporizador.
+
+2
+00:00:05,314 --> 00:00:06,354
+Criamos as 4 classes...
+
+3
+00:00:07,486 --> 00:00:19,245
+Painel
+
+4
+00:00:22,528 --> 00:00:30,246
+Peixe
+
+5
+00:00:34,049 --> 00:00:38,965
+Posicao
+
+6
+00:00:42,647 --> 00:00:47,840
+e Temporizador.
+
+7
+00:00:52,175 --> 00:01:05,127
+A classe Posicao tem os atributos linha e coluna inteiros
+
+8
+00:01:06,150 --> 00:01:17,019
+Um construtor
+
+9
+00:01:18,860 --> 00:01:35,236
+E métodos getters. Neste caso, os setters não fazem sentido.
+
+10
+00:01:36,407 --> 00:03:16,636
+Tem ainda os métodos isCantoAdjacente e getPosicaoDelta.
+
+11
+00:03:20,220 --> 00:04:05,494
+De seguida, geramos o equals + hashCode e o toString.
+
+12
+00:04:07,437 --> 00:00:00,000
+Podem fazer CTRL + SHIFT + F para formatar o código (indentar).
+
+13
+00:00:00,000 --> 00:00:00,000
+Podem fazer CTRL + SHIFT + F para formatar o código (indentar).
+

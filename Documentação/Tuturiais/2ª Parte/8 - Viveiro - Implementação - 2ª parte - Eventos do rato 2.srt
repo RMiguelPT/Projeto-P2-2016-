@@ -1,0 +1,48 @@
+1
+00:00:01,212 --> 00:00:06,529
+Sempre que clicarmos num peixe capturado e o arrastarmos para uma das 4 diagonais
+
+2
+00:00:06,929 --> 00:00:10,962
+ele deve deslocar-se para essa posição (se estiver livre, claro).
+
+3
+00:00:11,355 --> 00:00:15,303
+Primeiro, verificar se foi clicado algum peixe capturado.
+
+4
+00:00:15,583 --> 00:00:20,834
+E criar um flag (variável boleana) que indique que pode começar a tentar arrastar esse peixe capturado.
+
+5
+00:00:21,163 --> 00:00:23,853
+Inicialmente, essa variável deve começar a false.
+
+6
+00:00:24,743 --> 00:00:38,317
+Depois, sempre que se arrastar o rato e a flag estiver a true
+
+7
+00:00:38,834 --> 00:00:50,056
+verificamos se a posição de destino (onde o rato está atualmente)
+
+8
+00:00:50,630 --> 00:01:24,991
+é uma diagonal adjacente relativamente onde está o peixe e se está "vazia".
+
+9
+00:02:10,178 --> 00:02:11,714
+Nesse caso, podemos mover o aquário para essa posição, atualizar-lhe a posição e colocar a flag a false.
+
+10
+00:02:12,396 --> 00:02:28,381
+Quando se liberta o rato (mesmo que não se tenha movido nenhum aquário) coloca-se a flag a false.
+
+11
+00:02:45,272 --> 00:02:54,395
+E pronto! Simples e funcional :)
+
+12
+00:00:00,000 --> 00:00:00,000
+E pronto! Simples e funcional :)
+

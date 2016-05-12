@@ -1,0 +1,36 @@
+1
+00:00:01,703 --> 00:00:05,220
+Vamos supor que o objetivo da aplicação é capturar todos os peixes livres.
+
+2
+00:00:06,410 --> 00:00:11,563
+Então, quando isso acontecer, devemos mostrar uma mensagem apropriada.
+
+3
+00:00:12,128 --> 00:00:20,874
+Primeiro, criamos uma variável que contém o número atual de peixes livres.
+
+4
+00:00:21,531 --> 00:00:57,577
+Essa variável deve ser atualizada sempre que se adiciona um peixe livre
+
+5
+00:00:58,702 --> 00:01:27,407
+e sempre que se remove um peixe livre.
+
+6
+00:01:29,798 --> 00:01:50,764
+Criamos ainda um método que indica se o objetivo foi atingido.
+
+7
+00:01:52,363 --> 00:02:08,751
+Depois, na Janela, em vez de um ciclo infinito, o ciclo while termina quando o objetivo for atingido.
+
+8
+00:02:09,248 --> 00:02:46,140
+E assim, mostrar uma mensagem adequada.
+
+9
+00:03:06,608 --> 00:03:08,006
+E assim, mostrar uma mensagem adequada.
+

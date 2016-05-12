@@ -1,0 +1,16 @@
+1
+00:00:00,855 --> 00:00:02,260
+Neste vídeo, pode-se assistir à implementação
+
+2
+00:00:02,701 --> 00:00:05,073
+das novas funcionalidades do modelo de dados.
+
+3
+00:00:05,401 --> 00:00:08,480
+Não tem mais legendas além destas.
+
+4
+00:00:00,000 --> 00:00:00,000
+Não tem mais legendas além destas.
+

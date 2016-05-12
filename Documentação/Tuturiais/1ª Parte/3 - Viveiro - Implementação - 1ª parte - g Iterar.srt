@@ -1,0 +1,132 @@
+1
+00:00:01,178 --> 00:00:05,854
+Para que os peixes se movam com uma cadência é necessário introduzir o conceito de iteração.
+
+2
+00:00:06,144 --> 00:00:10,007
+Sempre que os objetos de uma aplicação possam sofrer alterações ao longo do tempo
+
+3
+00:00:10,509 --> 00:00:13,871
+sem intervenção do utilizador, é necessário mandar iterar de x em x milissegundos.
+
+4
+00:00:14,352 --> 00:00:23,433
+Para isso, devemos criar e utilizar uma thread.
+
+5
+00:00:38,160 --> 00:00:51,426
+Fazemos um ciclo infinito onde executamos o pretendido e fazemos sleep do tempo da cadência.
+
+6
+00:00:52,617 --> 00:01:10,616
+Como exemplo, vejamos como fica um simples println.
+
+7
+00:01:29,724 --> 00:01:39,956
+Não esquecer de iniciar a thread :)
+
+8
+00:01:58,151 --> 00:02:19,288
+Em vez do println pretendemos mandar iterar o painel.
+
+9
+00:02:22,801 --> 00:02:51,434
+O iterar do painel deve mandar iterar todos os seus peixes.
+
+10
+00:02:54,396 --> 00:03:02,946
+Criamos o método iterar na classe Peixe.
+
+11
+00:03:04,476 --> 00:03:32,898
+Para colocarmos um peixe a mover aleatoriamente na diagonal podemos definir um vetor com os deltas possíveis.
+
+12
+00:03:35,942 --> 00:03:45,697
+Para que cada peixe se mova de forma diferenciada e aleatória a ideia será baralhar esses deltas.
+
+13
+00:04:00,786 --> 00:05:05,869
+Podemos criar um vetor com as posições dos deltas, colocá-las numa lista e baralhá-la antes de usar.
+
+14
+00:06:13,771 --> 00:06:23,902
+Usamos o Collections.shuffle para baralhar a lista de posições dos deltas.
+
+15
+00:06:31,301 --> 00:06:58,773
+Depois tentamos, mover o peixe para a primeira posição possível (pode acontecer, num dado momento, não ser possível mover o peixe para nenhuma das diagonais).
+
+16
+00:07:05,980 --> 00:07:10,675
+Definimos um método no painel que verifica se uma posição é ou não válida.
+
+17
+00:07:11,615 --> 00:07:27,505
+Também dá jeito um método que devolva o peixe de uma posição. Neste caso, interessa saber se a novaPosicao tem ou não peixe.
+
+18
+00:08:08,066 --> 00:09:10,305
+Uma posição é válida se linha pertence a [0 .. linhas[ e coluna pertence a [0 .. colunas[.
+
+19
+00:09:21,397 --> 00:09:57,210
+Um peixe apenas pode ir para uma posição válida e que não tenha já um peixe.
+
+20
+00:10:03,695 --> 00:10:10,473
+Se essa condição se verificar, podemos mandar mover o peixe para essa posição.
+
+21
+00:10:12,805 --> 00:10:32,699
+Mas quem consegue, de facto, mover para outra posição é o painel. Ele é que conhece e controla o "mundo" (a matrizPeixes).
+
+22
+00:10:35,020 --> 00:10:42,879
+Temos de indicar a posição origem e a posição destino.
+
+23
+00:10:43,900 --> 00:11:05,683
+Atualizamos o atributo posicao e dizemos ao painel para atualizar a posicao (no gridPanel).
+
+24
+00:11:07,444 --> 00:11:27,224
+Usamos o método moveItem do gridPanel para criar uma animação fluida do peixe a deslocar-se.
+
+25
+00:11:44,959 --> 00:11:54,870
+Para mover um peixe de uma posicao para outra é necessário removê-lo da posição atual.
+
+26
+00:11:55,445 --> 00:12:06,056
+E colocá-lo na nova posição.
+
+27
+00:12:10,380 --> 00:12:53,614
+Claro que dá jeito implementar o método setPeixe(Peixe, Posicao).
+
+28
+00:13:07,490 --> 00:13:11,034
+Mas os peixes ainda não se movem.
+
+29
+00:13:12,065 --> 00:13:32,898
+Falta mandarmos o GridPanel redesenhar-se.
+
+30
+00:13:40,648 --> 00:14:11,944
+Já temos peixes a mexerem-se :D
+
+31
+00:14:13,709 --> 00:14:55,916
+Apesar de funcional, o mais correto é termos uma thread própria para mandar iterar o painel.
+
+32
+00:00:00,000 --> 00:00:00,000
+Impecável!
+
+33
+00:00:00,000 --> 00:00:00,000
+Impecável!
+

@@ -1,0 +1,28 @@
+1
+00:00:01,912 --> 00:00:04,943
+Para não percorrer a matriz de peixes para atualizar apenas 2 peixes,
+
+2
+00:00:05,694 --> 00:00:08,724
+vamos otimizar um pouco o processo criando uma lista auxiliar.
+
+3
+00:00:09,366 --> 00:00:15,053
+Definimos a lista
+
+4
+00:00:22,740 --> 00:00:30,817
+Inicializamo-la no construtor
+
+5
+00:00:36,742 --> 00:00:49,684
+Atualizamo-la no método adicionar peixe
+
+6
+00:00:53,824 --> 00:01:23,848
+Corrigimos o método iniciar.
+
+7
+00:00:00,000 --> 00:00:00,000
+Corrigimos o método iniciar.
+

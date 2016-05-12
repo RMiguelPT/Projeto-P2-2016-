@@ -1,0 +1,68 @@
+1
+00:00:00,901 --> 00:00:04,163
+Sempre que clicarmos num peixe livre, este deve transformar-se num peixe capturado (com aquário)
+
+2
+00:00:04,646 --> 00:00:07,285
+e deixará de movimentar-se aleatoriamente.
+
+3
+00:00:07,631 --> 00:00:15,132
+Para "apanharmos" os eventos do rato, vamos fazer com que a classe Painel implemente a interface GridPanelEventHandler.
+
+4
+00:00:16,072 --> 00:00:20,394
+Esta interface implica a implementação de cinco métodos:
+
+5
+00:00:22,585 --> 00:00:27,379
+mouseMoved, mousePressed, mouseDragged, mouseReleased e mouseExited
+
+6
+00:00:30,020 --> 00:00:40,820
+É importante indicar ao GridPanel qual a classe que vai "apanhar" os eventos do rato sobre ele.
+
+7
+00:00:43,024 --> 00:01:03,087
+Claro que no nosso caso será o Painel.
+
+8
+00:01:03,802 --> 00:01:19,941
+Como queremos "apanhar" os cliques sobre um peixe, vamos implementar o método mousePressed.
+
+9
+00:01:21,020 --> 00:02:13,520
+Inicializamos algumas variáveis (serão importantes também para o arrastar que iremos implementar noutro vídeo).
+
+10
+00:02:15,631 --> 00:03:10,052
+Se na posição que clicarmos existir um peixe livre este transformar-se-á num peixe capturado (peixe com aquário).
+
+11
+00:03:11,161 --> 00:03:14,960
+Vamos experimentar.
+
+12
+00:03:34,474 --> 00:03:46,519
+Parece que funciona bem mas quando o peixe liberta-se ocorre um erro de execução.
+
+13
+00:03:47,495 --> 00:03:53,054
+O problema é que uma LinkedList não pode ser alterada enquanto está a ser percorrida.
+
+14
+00:03:55,727 --> 00:03:58,941
+A maneira mais simples de resolvermos esse problema é utilizar
+
+15
+00:03:59,396 --> 00:04:16,286
+outra estrutura de dados: CopyOnWriteArrayList.
+
+16
+00:04:41,550 --> 00:04:43,793
+Impecável!
+
+17
+00:00:00,000 --> 00:00:00,000
+Impecável!
+
