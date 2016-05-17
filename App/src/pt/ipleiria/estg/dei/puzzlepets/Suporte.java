@@ -5,9 +5,8 @@ import pt.ipleiria.estg.dei.gridpanel.GridPanel;
 import pt.ipleiria.estg.dei.gridpanel.OverlayCellRepresentation;
 import pt.ipleiria.estg.dei.gridpanel.SingleImageCellRepresentation;
 
-public class Suporte {
+public class Suporte extends Representavel {
 	protected PainelPrincipal painelPrincipal;
-	protected CellRepresentation imagem;
 	protected Posicao posicao;
 	protected GridPanel grelha;
 	
@@ -21,9 +20,9 @@ public class Suporte {
 		
 	}
 	
-	protected void atualizar() {		
-		//grelha.add(posicao.getColuna(),posicao.getLinha(),imagem);
-		grelha.repaint();
-		
+	public Posicao getPosicao(){
+		return posicao;
 	}
+
+	
 }

@@ -3,8 +3,8 @@ package pt.ipleiria.estg.dei.puzzlepets;
 import pt.ipleiria.estg.dei.gridpanel.CellRepresentation;
 import pt.ipleiria.estg.dei.gridpanel.SingleImageCellRepresentation;
 
-public class Maca {
-	private CellRepresentation imagem;
+public class Maca extends SuportadoPorGelo {
+
 
 	public Maca() {
 		super();
@@ -12,8 +12,8 @@ public class Maca {
 		
 	}
 
-	public CellRepresentation getImagem() {
-		return imagem;
-	}
+//	public CellRepresentation getImagem() {
+//		return imagem;
+//	}
 		
 }

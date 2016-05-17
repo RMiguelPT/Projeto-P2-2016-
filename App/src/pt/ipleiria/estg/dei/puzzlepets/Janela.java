@@ -53,13 +53,13 @@ public class Janela extends JFrame {
 		GridPanel gridPainelPrincipal = new GridPanel();
 		gridPainelPrincipal.setNumberOfRows(8);
 		gridPainelPrincipal.setNumberOfColumns(8);
-		gridPainelPrincipal.setShowGridLines(true);
+		gridPainelPrincipal.setShowGridLines(false);
 		backgroundPanel.add(gridPainelPrincipal, BorderLayout.SOUTH);
 		
 		GridPanel gridPainelMacas = new GridPanel();
 		gridPainelMacas.setRowSize(126);
 		gridPainelMacas.setColumnSize(252);
-		gridPainelMacas.setShowGridLines(true);
+		gridPainelMacas.setShowGridLines(false);
 		gridPainelMacas.setNumberOfRows(1);
 		gridPainelMacas.setNumberOfColumns(1);
 		backgroundPanel.add(gridPainelMacas, BorderLayout.WEST);
@@ -69,7 +69,7 @@ public class Janela extends JFrame {
 		GridPanel gridPainelMovimentosEstrelas = new GridPanel();
 		gridPainelMovimentosEstrelas.setRowSize(153);
 		gridPainelMovimentosEstrelas.setColumnSize(230);
-		gridPainelMovimentosEstrelas.setShowGridLines(true);
+		gridPainelMovimentosEstrelas.setShowGridLines(false);
 		gridPainelMovimentosEstrelas.setNumberOfRows(1);
 		gridPainelMovimentosEstrelas.setNumberOfColumns(1);
 		backgroundPanel.add(gridPainelMovimentosEstrelas, BorderLayout.CENTER);
@@ -77,7 +77,7 @@ public class Janela extends JFrame {
 		GridPanel gridPainelPontuacao = new GridPanel();
 		gridPainelPontuacao.setRowSize(126);
 		gridPainelPontuacao.setColumnSize(252);
-		gridPainelPontuacao.setShowGridLines(true);
+		gridPainelPontuacao.setShowGridLines(false);
 		gridPainelPontuacao.setNumberOfRows(1);
 		gridPainelPontuacao.setNumberOfColumns(1);
 		backgroundPanel.add(gridPainelPontuacao, BorderLayout.EAST);
@@ -91,7 +91,7 @@ public class Janela extends JFrame {
 					
 						try {
 							jogo.iterar(System.currentTimeMillis());
-							System.out.println("ITERAÇÃO");
+							//System.out.println("ITERAÇÃO");
 							sleep(1000);
 						} catch (InterruptedException e) {
 							// TODO Auto-generated catch block

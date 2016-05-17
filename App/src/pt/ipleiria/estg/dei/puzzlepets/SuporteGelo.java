@@ -1,12 +1,27 @@
 package pt.ipleiria.estg.dei.puzzlepets;
 
 import pt.ipleiria.estg.dei.gridpanel.GridPanel;
+import pt.ipleiria.estg.dei.gridpanel.OverlayCellRepresentation;
+import pt.ipleiria.estg.dei.gridpanel.SingleImageCellRepresentation;
 
-public class SuporteGelo extends Suporte {
+public class SuporteGelo extends SuporteComPainel<SuportadoPorGelo> {
+	
 
-	public SuporteGelo(PainelPrincipal painelPrincipal, Posicao posicao, GridPanel grelha) {
-		super(painelPrincipal, posicao, grelha);
+	
+	public SuporteGelo(PainelPrincipal painelPrincipal, Posicao posicao, GridPanel grelha, SuportadoPorGelo suportadoPorGelo) {
+		super(painelPrincipal, posicao, grelha, suportadoPorGelo);
+		this.imagem = new SingleImageCellRepresentation("/imagens/suportes/gelo.png");
+				
+//		if (this.maca != null)
+//		{
+//			grelha.add(this.posicao.getLinha(), this.posicao.getColuna(), 
+//					new OverlayCellRepresentation(imagem, maca.getImagem()));
+//		}
+		//grelha.repaint();
+		//atualizar();
+		//System.out.println("created suporteAgua coluna: " + posicao.getColuna() + "linha: " + posicao.getLinha() + "\n");
 		// TODO Auto-generated constructor stub
 	}
+
 
 }
