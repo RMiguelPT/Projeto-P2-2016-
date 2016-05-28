@@ -7,14 +7,17 @@ import pt.ipleiria.estg.dei.gridpanel.OverlayCellRepresentation;
 public class SuporteComPainel <TSuportado extends Suportado> extends Suporte {
 
 	private TSuportado suportado;
+	private Temporizador temporizador;
 
-	public SuporteComPainel(PainelPrincipal painelPrincipal, Posicao posicao, GridPanel grelha, TSuportado suportado) {
-		super(painelPrincipal, posicao, grelha);
-		this.suportado = suportado;
-		
+	public SuporteComPainel(PainelPrincipal painelPrincipal, Posicao posicao) {
+		super(painelPrincipal, posicao);
+		this.temporizador = new Temporizador(1000);
 	}
 	
-	public void iterar(){
+	public void iterar(long tempo){
+		if (this.suportado != null){
+			this.suportado.iterar(tempo);
+		}
 		
 	}
 	
@@ -22,21 +25,18 @@ public class SuporteComPainel <TSuportado extends Suportado> extends Suporte {
 		this.suportado = suportado;
 	}
 	
-	private void fazerCair(){
+	public void fazerCairSuportado(Sentido sentido){
+		//System.out.println("Cair");
+		
+		painelPrincipal.fazerCair(suportado, this.posicao, sentido);
+		libertarSuportado();
 		
 	}
-	public void setSuportado(Suportado suportado){
-		
-	}
+
 	public void libertarSuportado (){
 		this.suportado = null;
 	}
 
-	public TSuportado getSuportado() {
-		// TODO Auto-generated method stub
-		return suportado;
-	}
-	
 	@Override
 	public CellRepresentation getImagem() {
 		CellRepresentation imgSuporte= super.getImagem();
@@ -45,4 +45,10 @@ public class SuporteComPainel <TSuportado extends Suportado> extends Suporte {
 		}
 		return imgSuporte;
 	}
+	
+	public boolean suportadoPodeCair(Sentido sentido){
+		return painelPrincipal.podeCair(this.suportado,this.posicao,sentido);
+	}
+	
+	
 }

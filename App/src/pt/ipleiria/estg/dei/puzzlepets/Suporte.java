@@ -1,22 +1,20 @@
 package pt.ipleiria.estg.dei.puzzlepets;
 
-import pt.ipleiria.estg.dei.gridpanel.CellRepresentation;
+
 import pt.ipleiria.estg.dei.gridpanel.GridPanel;
-import pt.ipleiria.estg.dei.gridpanel.OverlayCellRepresentation;
-import pt.ipleiria.estg.dei.gridpanel.SingleImageCellRepresentation;
+
 
 public class Suporte extends Representavel {
 	protected PainelPrincipal painelPrincipal;
 	protected Posicao posicao;
-	protected GridPanel grelha;
 	
 	
 	
-	public Suporte(PainelPrincipal painelPrincipal, Posicao posicao, GridPanel grelha) {
+	
+	public Suporte(PainelPrincipal painelPrincipal, Posicao posicao) {
 		super();
 		this.painelPrincipal = painelPrincipal;
 		this.posicao = posicao;
-		this.grelha = grelha;
 		
 	}
 	
@@ -24,5 +22,8 @@ public class Suporte extends Representavel {
 		return posicao;
 	}
 
+	public boolean podeReceberSuportado(Suportado<?> suportado, Sentido sentido){
+		return true;
+	}
 	
 }

@@ -6,14 +6,11 @@ import pt.ipleiria.estg.dei.gridpanel.SingleImageCellRepresentation;
 public class Maca extends SuportadoPorGelo {
 
 
-	public Maca() {
+	public Maca(SuporteComPainel suporte) {
 		super();
 		imagem = new SingleImageCellRepresentation("/imagens/objetivos/maca.png");
-		
+		this.suporte = suporte;
 	}
 
-//	public CellRepresentation getImagem() {
-//		return imagem;
-//	}
 		
 }

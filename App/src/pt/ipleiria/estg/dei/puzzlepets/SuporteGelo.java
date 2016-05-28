@@ -8,8 +8,8 @@ public class SuporteGelo extends SuporteComPainel<SuportadoPorGelo> {
 	
 
 	
-	public SuporteGelo(PainelPrincipal painelPrincipal, Posicao posicao, GridPanel grelha, SuportadoPorGelo suportadoPorGelo) {
-		super(painelPrincipal, posicao, grelha, suportadoPorGelo);
+	public SuporteGelo(PainelPrincipal painelPrincipal, Posicao posicao) {
+		super(painelPrincipal, posicao);
 		this.imagem = new SingleImageCellRepresentation("/imagens/suportes/gelo.png");
 				
 //		if (this.maca != null)

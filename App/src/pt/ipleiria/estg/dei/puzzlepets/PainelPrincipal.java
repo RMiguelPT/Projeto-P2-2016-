@@ -1,11 +1,6 @@
 package pt.ipleiria.estg.dei.puzzlepets;
 
 import pt.ipleiria.estg.dei.utils.FileHandler;
-
-import java.util.LinkedList;
-
-import javax.print.DocFlavor.STRING;
-
 import pt.ipleiria.estg.dei.gridpanel.CellRepresentation;
 import pt.ipleiria.estg.dei.gridpanel.GridPanel;
 
@@ -52,61 +47,94 @@ public class PainelPrincipal extends Painel {
 			for (int coluna = 0; coluna < colunas.length; coluna++) {
 				String primeiraLetra = colunas[coluna].substring(0, 1);
 				String segundaLetra = colunas[coluna].substring(1, 2);
+				Posicao posicaoAtual = new Posicao(numLinha, coluna);
+				Suporte suporte = null;
 
 				if (primeiraLetra.equals(AGUA)) {
-					if (segundaLetra.equals(MACA)) {
-						adicionar(new SuporteAgua(this, new Posicao(numLinha, coluna), grelha, new Maca()));
-					} else if (segundaLetra.equals(CESTO)) {
-						adicionar(new SuporteAgua(this, new Posicao(numLinha, coluna), grelha, new Cesto()));
-					} else {
-						adicionar(
-								new SuporteAgua(this, new Posicao(numLinha, coluna), grelha, 
-										new Animal(segundaLetra)));
-					}
-
+					adicionarSuporte(new SuporteAgua(this, posicaoAtual));
+					suporte = getSuporte(posicaoAtual);
 				}
 				if (primeiraLetra.equals(AR)) {
-					adicionar(new SuporteAr(this, new Posicao(numLinha, coluna), grelha, null));
+					adicionarSuporte(new SuporteAr(this, posicaoAtual));
+					suporte = getSuporte(posicaoAtual);
 				}
 				if (primeiraLetra.equals(GELO)) {
-					if (segundaLetra.equals(MACA)) {
-						adicionar(new SuporteGelo(this, new Posicao(numLinha, coluna), grelha, new Maca()));
-					}
-
-					else {
-						adicionar(
-								new SuporteGelo(this, new Posicao(numLinha, coluna), grelha, 
-										new Animal(segundaLetra)));
-					}
+					adicionarSuporte(new SuporteGelo(this, posicaoAtual));
+					suporte = getSuporte(posicaoAtual);
 				}
+
+				if (!(suporte instanceof SuporteAr)) {
+					adicionarSuportadoAoSuporte(((SuporteComPainel) suporte), segundaLetra);
+				}
+				atualizar(suporte, posicaoAtual);
 			}
 			numLinha++;
 		}
 	}
 
-	private void adicionar(Suporte suporte) {
-		
+	private void adicionarSuportadoAoSuporte(SuporteComPainel suporte, String segundaLetra) {
+		if (segundaLetra.equals(POLVO)) {
+			suporte.colocar(new Animal(TipoAnimal.Polvo, suporte));
+		}
+		if (segundaLetra.equals(RAPOSA)) {
+			suporte.colocar(new Animal(TipoAnimal.Raposa, suporte));
+
+		}
+		if (segundaLetra.equals(PEIXE)) {
+			suporte.colocar(new Animal(TipoAnimal.Peixe, suporte));
+		}
+		if (segundaLetra.equals(PANDA)) {
+			suporte.colocar(new Animal(TipoAnimal.Panda, suporte));
+		}
+		if (segundaLetra.equals(SAPO)) {
+			suporte.colocar(new Animal(TipoAnimal.Sapo, suporte));
+		}
+		if (segundaLetra.equals(MACA)) {
+			suporte.colocar(new Maca(suporte));
+		}
+		if (segundaLetra.equals(CESTO)) {
+			suporte.colocar(new Cesto(suporte));
+		}
+
+	}
+
+	private void adicionarSuporte(Suporte suporte) {
 		matriz[suporte.getPosicao().getLinha()][suporte.getPosicao().getColuna()] = suporte;
-		CellRepresentation imagemSuporte = suporte.getImagem();
-		grelha.add(suporte.getPosicao().getLinha(), suporte.getPosicao().getColuna(), imagemSuporte);
-		grelha.repaint();
 	}
-
-	private void atualizar(Posicao posicao) {
-
-	}
+	
+	
 
 	private void substituirPorAgua(SuporteGelo gelo) {
 
 	}
 
 	public void iterar(long tempo) {
-		
+		for (Suporte[] linhaSuporte : matriz) {
+			for (Suporte suporte : linhaSuporte) {
+				if (suporte instanceof SuporteComPainel) {
+					((SuporteComPainel) suporte).iterar(tempo);
+				}
+			}
+		}
+	}
+
+	private void atualizar(Suporte suporte, Posicao posicao) {
+		CellRepresentation imagemSuporte = suporte.getImagem();
+		grelha.add(suporte.getPosicao().getLinha(), suporte.getPosicao().getColuna(), imagemSuporte);
+		grelha.repaint();
 	}
 
 	private Suporte getSuporte(Posicao posicao) {
-		return null;
+		return matriz[posicao.getLinha()][posicao.getColuna()];
 	}
-	
 
+	public boolean podeCair(Suportado suportado, Posicao posicao, Sentido sentido) {
+		return matriz[posicao.seguir(sentido).getLinha()][posicao.seguir(sentido).getColuna()]
+				.podeReceberSuportado(suportado, sentido);
+	}
+
+	public void fazerCair(Suportado suportado, Posicao posicao, Sentido sentido) {
+		// matriz[posicao.seguir(sentido).getLinha()][posicao.seguir(sentido).getColuna()].
+
+	}
 }
