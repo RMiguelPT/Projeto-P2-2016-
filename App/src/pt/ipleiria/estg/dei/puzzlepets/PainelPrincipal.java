@@ -118,7 +118,7 @@ public class PainelPrincipal extends Painel {
 		}
 	}
 
-	private void atualizar(Suporte suporte, Posicao posicao) {
+	public void atualizar(Suporte suporte, Posicao posicao) {
 		CellRepresentation imagemSuporte = suporte.getImagem();
 		grelha.add(suporte.getPosicao().getLinha(), suporte.getPosicao().getColuna(), imagemSuporte);
 		grelha.repaint();
@@ -129,12 +129,14 @@ public class PainelPrincipal extends Painel {
 	}
 
 	public boolean podeCair(Suportado suportado, Posicao posicao, Sentido sentido) {
+		
 		return matriz[posicao.seguir(sentido).getLinha()][posicao.seguir(sentido).getColuna()]
 				.podeReceberSuportado(suportado, sentido);
 	}
 
 	public void fazerCair(Suportado suportado, Posicao posicao, Sentido sentido) {
-		// matriz[posicao.seguir(sentido).getLinha()][posicao.seguir(sentido).getColuna()].
+		((SuporteComPainel)matriz[posicao.seguir(sentido).getLinha()][posicao.seguir(sentido).getColuna()]).colocar(suportado);
+		atualizar(matriz[posicao.seguir(sentido).getLinha()][posicao.seguir(sentido).getColuna()], posicao);	
 
 	}
 }

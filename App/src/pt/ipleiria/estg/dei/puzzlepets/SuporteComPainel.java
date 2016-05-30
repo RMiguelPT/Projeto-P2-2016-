@@ -30,6 +30,7 @@ public class SuporteComPainel <TSuportado extends Suportado> extends Suporte {
 		
 		painelPrincipal.fazerCair(suportado, this.posicao, sentido);
 		libertarSuportado();
+		painelPrincipal.atualizar(this, this.posicao);
 		
 	}
 
@@ -48,6 +49,11 @@ public class SuporteComPainel <TSuportado extends Suportado> extends Suporte {
 	
 	public boolean suportadoPodeCair(Sentido sentido){
 		return painelPrincipal.podeCair(this.suportado,this.posicao,sentido);
+	}
+
+	@Override
+	public boolean podeReceberSuportado(Suportado<?> suportado, Sentido sentido){
+		return this.suportado == null ? true : false;
 	}
 	
 	

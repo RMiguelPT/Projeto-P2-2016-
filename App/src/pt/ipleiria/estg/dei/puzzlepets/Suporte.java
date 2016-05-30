@@ -4,7 +4,7 @@ package pt.ipleiria.estg.dei.puzzlepets;
 import pt.ipleiria.estg.dei.gridpanel.GridPanel;
 
 
-public class Suporte extends Representavel {
+public abstract class Suporte extends Representavel {
 	protected PainelPrincipal painelPrincipal;
 	protected Posicao posicao;
 	
@@ -22,8 +22,6 @@ public class Suporte extends Representavel {
 		return posicao;
 	}
 
-	public boolean podeReceberSuportado(Suportado<?> suportado, Sentido sentido){
-		return true;
-	}
+	public abstract boolean podeReceberSuportado(Suportado<?> suportado, Sentido sentido);
 	
 }

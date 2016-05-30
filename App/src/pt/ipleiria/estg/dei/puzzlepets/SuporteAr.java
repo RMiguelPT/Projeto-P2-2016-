@@ -12,5 +12,15 @@ public class SuporteAr extends Suporte {
 		this.imagem = new SingleImageCellRepresentation("/imagens/suportes/ar.png");
 		
 	}
+	
+	public boolean suportadoPodePassar(Sentido sentido){
+		return true;
+		
+	}
+
+	@Override
+	public boolean podeReceberSuportado(Suportado<?> suportado, Sentido sentido){
+		return false;
+	}
 
 }

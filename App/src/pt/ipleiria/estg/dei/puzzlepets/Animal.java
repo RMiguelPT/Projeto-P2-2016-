@@ -8,11 +8,24 @@ public class Animal extends SuportadoPorGelo {
 
 	public Animal(TipoAnimal tipo, SuporteComPainel suporte) {
 		super();
-		// this.imagem = new
-		// SingleImageCellRepresentation("/imagens/animais/panda.png");
 
-		this.imagem = new SingleImageCellRepresentation("/imagens/animais/panda.png");
 		this.tipoAnimal = tipo;
+
+		if (this.tipoAnimal.equals(TipoAnimal.Panda)) {
+			this.imagem = new SingleImageCellRepresentation("/imagens/animais/panda.png");
+		}
+		if (this.tipoAnimal.equals(TipoAnimal.Peixe)) {
+			this.imagem = new SingleImageCellRepresentation("/imagens/animais/peixe.png");
+		}
+		if (this.tipoAnimal.equals(TipoAnimal.Polvo)) {
+			this.imagem = new SingleImageCellRepresentation("/imagens/animais/polvo.png");
+		}
+		if (this.tipoAnimal.equals(TipoAnimal.Raposa)) {
+			this.imagem = new SingleImageCellRepresentation("/imagens/animais/raposa.png");
+		}
+		if (this.tipoAnimal.equals(TipoAnimal.Sapo)) {
+			this.imagem = new SingleImageCellRepresentation("/imagens/animais/sapo.png");
+		}
 		this.suporte = suporte;
 
 	}
