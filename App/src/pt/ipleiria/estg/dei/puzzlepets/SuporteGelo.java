@@ -4,7 +4,7 @@ import pt.ipleiria.estg.dei.gridpanel.GridPanel;
 import pt.ipleiria.estg.dei.gridpanel.OverlayCellRepresentation;
 import pt.ipleiria.estg.dei.gridpanel.SingleImageCellRepresentation;
 
-public class SuporteGelo extends SuporteComPainel<SuportadoPorGelo> {
+public class SuporteGelo extends SuporteComSuportado<SuportadoPorGelo> {
 	
 
 	

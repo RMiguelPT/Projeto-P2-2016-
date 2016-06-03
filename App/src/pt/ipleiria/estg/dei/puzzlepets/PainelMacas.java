@@ -8,11 +8,17 @@ import pt.ipleiria.estg.dei.gridpanel.TextCellRepresentation;
 public class PainelMacas extends PainelValorImagem {
 	
 	
-	public PainelMacas(GridPanel grelha) {
-		super(grelha, "/imagens/paineis/macas.png", 0);
+	public PainelMacas(GridPanel grelha, Jogo jogo) {
+		super(grelha, "/imagens/paineis/macas.png", 0, jogo);
+		
 		
 	}
 
+	@Override
+	public void incrementarValor(int valor) {
+		this.valor+=valor;
+		this.atualizar();		
+	}
 	
 
 }

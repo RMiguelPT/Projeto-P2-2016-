@@ -10,12 +10,14 @@ import pt.ipleiria.estg.dei.gridpanel.TextCellRepresentation;
 import pt.ipleiria.estg.dei.gridpanel.TextCellRepresentation.HorizontalAlignment;
 import pt.ipleiria.estg.dei.gridpanel.TextCellRepresentation.VerticalAlignment;
 
-public class PainelValorImagem extends Painel {
+public abstract class PainelValorImagem extends Painel {
 
 	protected CellRepresentation imagem;
 	protected TextCellRepresentation texto;
 	protected int valor;
-	public PainelValorImagem(GridPanel grelha, String imagem, int valor) {
+	protected Jogo jogo;
+	
+	public PainelValorImagem(GridPanel grelha, String imagem, int valor, Jogo jogo) {
 		super(grelha);
 		this.valor=valor;
 		this.imagem = new SingleImageCellRepresentation(imagem);
@@ -23,13 +25,12 @@ public class PainelValorImagem extends Painel {
 		texto.setVerticalAlignment(VerticalAlignment.CENTER);
 		texto.setHorizontalAlignment(HorizontalAlignment.CENTER);
 		texto.setTextFont(new Font("Times New Roman", 1, 80));
+		this.jogo = jogo;
 		
 		atualizar();
 	}
 
-	public void incrementarValor(int valor) {
-		
-	}
+	public abstract void incrementarValor(int valor);
 
 	public void decrementarValor() {
 		
@@ -43,7 +44,8 @@ public class PainelValorImagem extends Painel {
 		return imagem;
 	}
 	
-	private void atualizar() {		
+	protected void atualizar() {	
+		texto.setText("" + valor);
 		grelha.add(0,0,new OverlayCellRepresentation(imagem, texto));
 		grelha.repaint();
 	}

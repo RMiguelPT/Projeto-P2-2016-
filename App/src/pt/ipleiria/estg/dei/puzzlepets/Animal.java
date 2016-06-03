@@ -6,7 +6,7 @@ import pt.ipleiria.estg.dei.gridpanel.SingleImageCellRepresentation;
 public class Animal extends SuportadoPorGelo {
 	private TipoAnimal tipoAnimal;
 
-	public Animal(TipoAnimal tipo, SuporteComPainel suporte) {
+	public Animal(TipoAnimal tipo, SuporteComSuportado suporte) {
 		super();
 
 		this.tipoAnimal = tipo;

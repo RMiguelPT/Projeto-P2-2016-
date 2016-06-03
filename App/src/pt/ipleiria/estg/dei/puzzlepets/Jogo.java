@@ -15,10 +15,10 @@ public class Jogo {
 	public Jogo(GridPanel gridPainelPrincipal, GridPanel gridPainelMacas, GridPanel gridPainelPontuacao,
 			GridPanel gridPainelMovimentosEstrelas) {
 		super();
-		 painelPrincipal =  new PainelPrincipal(gridPainelPrincipal);
-		 painelMacas = new PainelMacas(gridPainelMacas);
-		 painelPontuacao = new PainelPontuacao(gridPainelPontuacao);
-		 painelMovimentosEstrelas = new PainelMovimentosEstrelas(gridPainelMovimentosEstrelas);
+		 painelPrincipal =  new PainelPrincipal(gridPainelPrincipal, this);
+		 painelMacas = new PainelMacas(gridPainelMacas, this);
+		 painelPontuacao = new PainelPontuacao(gridPainelPontuacao, this);
+		 painelMovimentosEstrelas = new PainelMovimentosEstrelas(gridPainelMovimentosEstrelas, this);
 	}
 
 	public void incrementarPontuacao(int pontos)
@@ -33,7 +33,7 @@ public class Jogo {
 	
 	public void incrementarMacas()
 	{
-		
+		this.painelMacas.incrementarValor(1);
 	}
 	
 	public void incrementarMovimentos(int quant)

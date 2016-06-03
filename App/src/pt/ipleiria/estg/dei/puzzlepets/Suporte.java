@@ -23,5 +23,7 @@ public abstract class Suporte extends Representavel {
 	}
 
 	public abstract boolean podeReceberSuportado(Suportado<?> suportado, Sentido sentido);
+
+	public abstract void agarrar(Suportado suportado, Sentido sentido);
 	
 }

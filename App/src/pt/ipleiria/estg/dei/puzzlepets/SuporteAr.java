@@ -13,14 +13,17 @@ public class SuporteAr extends Suporte {
 		
 	}
 	
-	public boolean suportadoPodePassar(Sentido sentido){
-		return true;
-		
-	}
+	/*public boolean suportadoPodePassar(Sentido sentido){
+		return sentido == Sentido.S? true:false;		
+	}*/
 
 	@Override
 	public boolean podeReceberSuportado(Suportado<?> suportado, Sentido sentido){
-		return false;
+		return sentido == Sentido.S && painelPrincipal.podeCair(suportado, posicao, Sentido.S);
 	}
-
+	
+	@Override
+	public void agarrar(Suportado suportado, Sentido sentido) {
+		painelPrincipal.fazerCair(suportado, posicao, sentido);
+	}
 }
