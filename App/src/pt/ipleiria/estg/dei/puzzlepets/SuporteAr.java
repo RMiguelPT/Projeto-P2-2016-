@@ -13,9 +13,6 @@ public class SuporteAr extends Suporte {
 		
 	}
 	
-	/*public boolean suportadoPodePassar(Sentido sentido){
-		return sentido == Sentido.S? true:false;		
-	}*/
 
 	@Override
 	public boolean podeReceberSuportado(Suportado<?> suportado, Sentido sentido){

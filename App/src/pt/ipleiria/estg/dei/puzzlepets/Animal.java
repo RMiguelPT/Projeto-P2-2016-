@@ -3,7 +3,7 @@ package pt.ipleiria.estg.dei.puzzlepets;
 import pt.ipleiria.estg.dei.gridpanel.CellRepresentation;
 import pt.ipleiria.estg.dei.gridpanel.SingleImageCellRepresentation;
 
-public class Animal extends SuportadoPorGelo {
+public class Animal extends Combinavel {
 	private TipoAnimal tipoAnimal;
 
 	public Animal(TipoAnimal tipo, SuporteComSuportado suporte) {

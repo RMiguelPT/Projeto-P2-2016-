@@ -1,10 +1,14 @@
 package pt.ipleiria.estg.dei.puzzlepets;
 
 import pt.ipleiria.estg.dei.utils.FileHandler;
+
+import java.awt.event.MouseEvent;
+
 import pt.ipleiria.estg.dei.gridpanel.CellRepresentation;
 import pt.ipleiria.estg.dei.gridpanel.GridPanel;
+import pt.ipleiria.estg.dei.gridpanel.GridPanelEventHandler;
 
-public class PainelPrincipal extends Painel {
+public class PainelPrincipal extends Painel implements GridPanelEventHandler {
 
 	/*---------SUPORTES-----------*/
 	private static final String AGUA = "A";
@@ -26,6 +30,10 @@ public class PainelPrincipal extends Painel {
 	public Jogo jogo;
 	private int quantMacasNoPainel;
 	private Suporte[][] matriz;
+	private Posicao posicaoInicial;
+
+	private static final int NUM_LINHAS = 8;
+	private static final int NUM_COLUNAS = 8;
 
 	public PainelPrincipal(GridPanel grelha, Jogo jogo) {
 		super(grelha);
@@ -33,6 +41,8 @@ public class PainelPrincipal extends Painel {
 		matriz = new Suporte[grelha.getNumberOfRows()][grelha.getNumberOfColumns()];
 
 		lerFicheiro();
+
+		grelha.setEventHandler(this);
 
 	}
 
@@ -127,7 +137,7 @@ public class PainelPrincipal extends Painel {
 	}
 
 	public boolean podeCair(Suportado suportado, Posicao posicao, Sentido sentido) {
-		if (posicao.seguir(sentido).isDentro(8, 8)) {
+		if (posicao.seguir(sentido).isDentro(NUM_LINHAS, NUM_COLUNAS)) {
 			return matriz[posicao.seguir(sentido).getLinha()][posicao.seguir(sentido).getColuna()]
 					.podeReceberSuportado(suportado, sentido);
 
@@ -136,8 +146,92 @@ public class PainelPrincipal extends Painel {
 	}
 
 	public void fazerCair(Suportado suportado, Posicao posicao, Sentido sentido) {
-		 matriz[posicao.seguir(sentido).getLinha()][posicao.seguir(sentido).getColuna()]
-				.agarrar(suportado, sentido);
-		 }
+		matriz[posicao.seguir(sentido).getLinha()][posicao.seguir(sentido).getColuna()].agarrar(suportado, sentido);
+	}
+
+	@Override
+	public void mouseDragged(MouseEvent arg0, int arg1, int arg2) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void mouseExited(MouseEvent arg0) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void mouseMoved(MouseEvent arg0, int arg1, int arg2) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void mousePressed(MouseEvent evt, int linha, int coluna) {
+		// System.out.println("Pressionado em Linha: " + linha + " Coluna: " +
+		// coluna);
+		posicaoInicial = new Posicao(linha, coluna);
+	}
+
+	@Override
+	public void mouseReleased(MouseEvent evt, int linha, int coluna) {
+		// System.out.println("Largado em Linha: " + linha + " Coluna: " +
+		// coluna);
+		Posicao posicaoFinal = new Posicao(linha, coluna);
+		Sentido sentido = posicaoInicial.getSentido(posicaoFinal);
+		trocar(posicaoInicial, sentido);
+		// System.out.println(sentido.name());
+
+	}
+
+	private void trocar(Posicao posicaoInicial, Sentido sentido) {
+		// System.out.println(""+ posicaoInicial.getLinha() +
+		// posicaoInicial.getColuna()+ sentido.name() );
+		Posicao posicaoDestino = posicaoInicial.seguir(sentido);
+		Suportado suportadoOrigem = getSuportado(posicaoInicial);
+		Suportado suportadoDestino = getSuportado(posicaoDestino);
+		
+		if (!(suportadoOrigem instanceof Movivel) || !(suportadoDestino instanceof Movivel)){
+			return;
+		}
+		if (!(suportadoOrigem instanceof Combinavel && suportadoDestino instanceof Combinavel)){
+			return;
+		}
+		trocar(suportadoOrigem, suportadoDestino, sentido);
+	}
 	
+
+	private void trocar(Suportado suportadoOrigem, Suportado suportadoDestino, Sentido sentido) {
+		boolean existeCombinaçãoOrigem;
+		boolean existeCombinaçãoDestino;
+		existeCombinaçãoOrigem = suportadoOrigem instanceof Combinavel 
+				&& formaCombinacao(suportadoOrigem, sentido);
+		existeCombinaçãoDestino = suportadoDestino instanceof Combinavel 
+				&& formaCombinacao(suportadoDestino, sentido.getInverso());
+		
+		if (existeCombinaçãoOrigem){
+			//TODO poder que se forma
+		}
+		
+		
+	}
+
+	private boolean formaCombinacao(Suportado suportadoOrigem, Sentido sentido) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	private Suportado getSuportado(Posicao posicao) {
+		Suporte suporte = null;
+		if (posicao.isDentro(NUM_LINHAS, NUM_COLUNAS)) {
+			suporte = getSuporte(posicao);
+
+			if (suporte != null && suporte instanceof SuporteComSuportado) {
+				return ((SuporteComSuportado) suporte).getSuportado();
+			}
+		}
+		return null;
+	}
+
 }

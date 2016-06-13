@@ -72,5 +72,9 @@ public class SuporteComSuportado<TSuportado extends Suportado> extends Suporte {
 			colocar((TSuportado) suportado);
 		}
 	}
+	
+	public Suportado getSuportado(){
+		return this.suportado;
+	}
 
 }
