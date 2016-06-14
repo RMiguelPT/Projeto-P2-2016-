@@ -1,9 +1,12 @@
 package pt.ipleiria.estg.dei.puzzlepets;
 
+import Suportes.SuporteComSuportado;
 import pt.ipleiria.estg.dei.gridpanel.CellRepresentation;
 import pt.ipleiria.estg.dei.gridpanel.SingleImageCellRepresentation;
+import Interfaces.Combinavel;
+import Interfaces.Iteravel;
 
-public class Animal extends Combinavel {
+public class Animal extends SuportadoPorGelo  {
 	private TipoAnimal tipoAnimal;
 
 	public Animal(TipoAnimal tipo, SuporteComSuportado suporte) {
@@ -28,6 +31,15 @@ public class Animal extends Combinavel {
 		}
 		this.suporte = suporte;
 
+	}
+	public boolean combinaCom(Suportado suportado){
+		if (suportado instanceof Animal){
+			if (this.tipoAnimal.equals(((Animal)suportado).tipoAnimal)){
+				return true;
+			}
+		}
+		return false;
+		
 	}
 
 }

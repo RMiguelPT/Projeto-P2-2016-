@@ -1,5 +1,7 @@
 package pt.ipleiria.estg.dei.puzzlepets;
 
+import Suportes.SuporteAgua;
+import Suportes.SuporteComSuportado;
 import pt.ipleiria.estg.dei.gridpanel.SingleImageCellRepresentation;
 
 public class Cesto<SA extends SuporteAgua> extends Suportado {

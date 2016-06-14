@@ -1,5 +1,6 @@
 package pt.ipleiria.estg.dei.puzzlepets;
 
+import Suportes.SuporteComSuportado;
 import pt.ipleiria.estg.dei.gridpanel.CellRepresentation;
 import pt.ipleiria.estg.dei.gridpanel.SingleImageCellRepresentation;
 

@@ -19,8 +19,8 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="3" language="java" name="pt.ipleiria.estg.dei.puzzlepets.Painel" project="PuzzlePets" 
-    file="/PuzzlePets/src/pt/ipleiria/estg/dei/puzzlepets/Painel.java" binary="false" corner="BOTTOM_RIGHT">    
+  <class id="3" language="java" name="Paineis.Painel" project="PuzzlePets" file="/PuzzlePets/src/Paineis/Painel.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="897" y="98"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -28,8 +28,8 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="4" language="java" name="pt.ipleiria.estg.dei.puzzlepets.PainelPontuacao" project="PuzzlePets" 
-    file="/PuzzlePets/src/pt/ipleiria/estg/dei/puzzlepets/PainelPontuacao.java" binary="false" corner="BOTTOM_RIGHT">    
+  <class id="4" language="java" name="Paineis.PainelPontuacao" project="PuzzlePets" 
+    file="/PuzzlePets/src/Paineis/PainelPontuacao.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="483" y="484"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -37,8 +37,8 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="5" language="java" name="pt.ipleiria.estg.dei.puzzlepets.PainelPrincipal" project="PuzzlePets" 
-    file="/PuzzlePets/src/pt/ipleiria/estg/dei/puzzlepets/PainelPrincipal.java" binary="false" corner="BOTTOM_RIGHT">    
+  <class id="5" language="java" name="Paineis.PainelPrincipal" project="PuzzlePets" 
+    file="/PuzzlePets/src/Paineis/PainelPrincipal.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="678" y="217"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -46,8 +46,8 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="6" language="java" name="pt.ipleiria.estg.dei.puzzlepets.PainelValorImagem" project="PuzzlePets" 
-    file="/PuzzlePets/src/pt/ipleiria/estg/dei/puzzlepets/PainelValorImagem.java" binary="false" corner="BOTTOM_RIGHT">    
+  <class id="6" language="java" name="Paineis.PainelValorImagem" project="PuzzlePets" 
+    file="/PuzzlePets/src/Paineis/PainelValorImagem.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="782" y="487"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -55,8 +55,8 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="7" language="java" name="pt.ipleiria.estg.dei.puzzlepets.PainelMacas" project="PuzzlePets" 
-    file="/PuzzlePets/src/pt/ipleiria/estg/dei/puzzlepets/PainelMacas.java" binary="false" corner="BOTTOM_RIGHT">    
+  <class id="7" language="java" name="Paineis.PainelMacas" project="PuzzlePets" 
+    file="/PuzzlePets/src/Paineis/PainelMacas.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="548" y="703"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -64,9 +64,8 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="8" language="java" name="pt.ipleiria.estg.dei.puzzlepets.PainelMovimentosEstrelas" project="PuzzlePets" 
-    file="/PuzzlePets/src/pt/ipleiria/estg/dei/puzzlepets/PainelMovimentosEstrelas.java" binary="false" 
-    corner="BOTTOM_RIGHT">    
+  <class id="8" language="java" name="Paineis.PainelMovimentosEstrelas" project="PuzzlePets" 
+    file="/PuzzlePets/src/Paineis/PainelMovimentosEstrelas.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="224" y="776"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -74,86 +73,86 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <association id="9">    
-    <end type="SOURCE" refId="2" navigable="false">      
-      <attribute id="10" name="painelPontuacao">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </attribute>      
-      <multiplicity id="11" minimum="0" maximum="1">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="4" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="12">    
-    <end type="SOURCE" refId="2" navigable="false">      
-      <attribute id="13" name="painelMovimentosEstrelas">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </attribute>      
-      <multiplicity id="14" minimum="0" maximum="1">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="8" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <generalization id="15">    
-    <end type="SOURCE" refId="8"/>    
-    <end type="TARGET" refId="6"/>  
+  <generalization id="9">    
+    <end type="SOURCE" refId="5"/>    
+    <end type="TARGET" refId="3"/>  
   </generalization>  
-  <association id="16">    
-    <end type="SOURCE" refId="2" navigable="false">      
-      <attribute id="17" name="painelPrincipal">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </attribute>      
-      <multiplicity id="18" minimum="0" maximum="1">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="3" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="19">    
+  <association id="10">    
     <end type="SOURCE" refId="5" navigable="false">      
-      <attribute id="20" name="jogo">        
+      <attribute id="11" name="jogo">        
         <position height="0" width="0" x="0" y="0"/>      
       </attribute>      
-      <multiplicity id="21" minimum="0" maximum="1">        
+      <multiplicity id="12" minimum="0" maximum="1">        
         <position height="0" width="0" x="0" y="0"/>      
       </multiplicity>    
     </end>    
     <end type="TARGET" refId="2" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <generalization id="22">    
-    <end type="SOURCE" refId="5"/>    
-    <end type="TARGET" refId="3"/>  
-  </generalization>  
-  <generalization id="23">    
+  <association id="13">    
+    <end type="SOURCE" refId="2" navigable="false">      
+      <attribute id="14" name="painelPrincipal">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="15" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="3" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="16">    
     <end type="SOURCE" refId="4"/>    
     <end type="TARGET" refId="6"/>  
   </generalization>  
-  <association id="24">    
+  <association id="17">    
     <end type="SOURCE" refId="2" navigable="false">      
-      <attribute id="25" name="painelMacas">        
+      <attribute id="18" name="painelPontuacao">        
         <position height="0" width="0" x="0" y="0"/>      
       </attribute>      
-      <multiplicity id="26" minimum="0" maximum="1">        
+      <multiplicity id="19" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="4" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="20">    
+    <end type="SOURCE" refId="6"/>    
+    <end type="TARGET" refId="3"/>  
+  </generalization>  
+  <generalization id="21">    
+    <end type="SOURCE" refId="8"/>    
+    <end type="TARGET" refId="6"/>  
+  </generalization>  
+  <generalization id="22">    
+    <end type="SOURCE" refId="7"/>    
+    <end type="TARGET" refId="6"/>  
+  </generalization>  
+  <association id="23">    
+    <end type="SOURCE" refId="2" navigable="false">      
+      <attribute id="24" name="painelMacas">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="25" minimum="0" maximum="1">        
         <position height="0" width="0" x="0" y="0"/>      
       </multiplicity>    
     </end>    
     <end type="TARGET" refId="6" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <generalization id="27">    
-    <end type="SOURCE" refId="6"/>    
-    <end type="TARGET" refId="3"/>  
-  </generalization>  
-  <generalization id="28">    
-    <end type="SOURCE" refId="7"/>    
-    <end type="TARGET" refId="6"/>  
-  </generalization>  
+  <association id="26">    
+    <end type="SOURCE" refId="2" navigable="false">      
+      <attribute id="27" name="painelMovimentosEstrelas">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="28" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="8" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
   <classifier-display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
     sort-features="false" accessors="true" visibility="true">    
     <attributes public="true" package="true" protected="true" private="true" static="true"/>    

@@ -1,8 +1,15 @@
-package pt.ipleiria.estg.dei.puzzlepets;
+package Suportes;
 
+import Paineis.PainelPrincipal;
 import pt.ipleiria.estg.dei.gridpanel.CellRepresentation;
 import pt.ipleiria.estg.dei.gridpanel.GridPanel;
 import pt.ipleiria.estg.dei.gridpanel.OverlayCellRepresentation;
+import pt.ipleiria.estg.dei.puzzlepets.Cesto;
+import pt.ipleiria.estg.dei.puzzlepets.Maca;
+import pt.ipleiria.estg.dei.puzzlepets.Posicao;
+import pt.ipleiria.estg.dei.puzzlepets.Sentido;
+import pt.ipleiria.estg.dei.puzzlepets.Suportado;
+import pt.ipleiria.estg.dei.puzzlepets.Temporizador;
 
 public class SuporteComSuportado<TSuportado extends Suportado> extends Suporte {
 

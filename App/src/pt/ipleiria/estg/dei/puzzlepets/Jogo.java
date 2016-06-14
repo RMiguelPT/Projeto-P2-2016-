@@ -2,6 +2,12 @@ package pt.ipleiria.estg.dei.puzzlepets;
 
 import java.awt.EventQueue;
 
+import Paineis.Painel;
+import Paineis.PainelMacas;
+import Paineis.PainelMovimentosEstrelas;
+import Paineis.PainelPontuacao;
+import Paineis.PainelPrincipal;
+import Paineis.PainelValorImagem;
 import pt.ipleiria.estg.dei.gridpanel.GridPanel;
 
 public class Jogo {

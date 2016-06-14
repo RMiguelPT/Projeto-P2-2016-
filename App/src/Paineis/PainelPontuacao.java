@@ -1,7 +1,8 @@
-package pt.ipleiria.estg.dei.puzzlepets;
+package Paineis;
 
 import pt.ipleiria.estg.dei.gridpanel.CellRepresentation;
 import pt.ipleiria.estg.dei.gridpanel.GridPanel;
+import pt.ipleiria.estg.dei.puzzlepets.Jogo;
 
 public class PainelPontuacao extends PainelValorImagem {
 		

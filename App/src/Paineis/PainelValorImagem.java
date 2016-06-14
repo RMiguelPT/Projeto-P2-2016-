@@ -1,4 +1,4 @@
-package pt.ipleiria.estg.dei.puzzlepets;
+package Paineis;
 
 import java.awt.Font;
 
@@ -9,6 +9,7 @@ import pt.ipleiria.estg.dei.gridpanel.SingleImageCellRepresentation;
 import pt.ipleiria.estg.dei.gridpanel.TextCellRepresentation;
 import pt.ipleiria.estg.dei.gridpanel.TextCellRepresentation.HorizontalAlignment;
 import pt.ipleiria.estg.dei.gridpanel.TextCellRepresentation.VerticalAlignment;
+import pt.ipleiria.estg.dei.puzzlepets.Jogo;
 
 public abstract class PainelValorImagem extends Painel {
 

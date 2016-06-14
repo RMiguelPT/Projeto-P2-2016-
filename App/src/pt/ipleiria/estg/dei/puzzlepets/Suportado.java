@@ -1,6 +1,9 @@
 package pt.ipleiria.estg.dei.puzzlepets;
 
-public abstract class Suportado<TSuporte extends SuporteComSuportado> extends Representavel {
+import Interfaces.Iteravel;
+import Suportes.SuporteComSuportado;
+
+public abstract class Suportado<TSuporte extends SuporteComSuportado> extends Representavel implements Iteravel {
 	
 	protected TSuporte suporte;
 	protected Temporizador temporizador;
@@ -10,6 +13,7 @@ public abstract class Suportado<TSuporte extends SuporteComSuportado> extends Re
 		this.temporizador = new Temporizador(100);
 	}
 	
+	@Override
 	public void iterar(long millis){
 		if (temporizador.getMilissegundosEmFalta() == 0){
 			temporizador.reiniciar();
@@ -29,4 +33,10 @@ public abstract class Suportado<TSuporte extends SuporteComSuportado> extends Re
 	{
 		return this.suporte.posicao;
 	}
+
+	public TSuporte getSuporte() {
+		return suporte;
+	}
+	
+	
 }

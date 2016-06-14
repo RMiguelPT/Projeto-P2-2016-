@@ -1,12 +1,33 @@
-package pt.ipleiria.estg.dei.puzzlepets;
+package Paineis;
 
 import pt.ipleiria.estg.dei.utils.FileHandler;
 
 import java.awt.event.MouseEvent;
 
+import Poderes.Poder;
+import Poderes.PoderArcoIris;
+import Poderes.PoderCruz;
+import Poderes.PoderEstrela;
+import Poderes.PoderHorizontal;
+import Poderes.PoderVertical;
+import Suportes.Suporte;
+import Suportes.SuporteAgua;
+import Suportes.SuporteAr;
+import Suportes.SuporteComSuportado;
+import Suportes.SuporteGelo;
 import pt.ipleiria.estg.dei.gridpanel.CellRepresentation;
 import pt.ipleiria.estg.dei.gridpanel.GridPanel;
 import pt.ipleiria.estg.dei.gridpanel.GridPanelEventHandler;
+import pt.ipleiria.estg.dei.puzzlepets.Animal;
+import pt.ipleiria.estg.dei.puzzlepets.Cesto;
+import pt.ipleiria.estg.dei.puzzlepets.Combinavel;
+import pt.ipleiria.estg.dei.puzzlepets.Jogo;
+import pt.ipleiria.estg.dei.puzzlepets.Maca;
+import pt.ipleiria.estg.dei.puzzlepets.Movivel;
+import pt.ipleiria.estg.dei.puzzlepets.Posicao;
+import pt.ipleiria.estg.dei.puzzlepets.Sentido;
+import pt.ipleiria.estg.dei.puzzlepets.Suportado;
+import pt.ipleiria.estg.dei.puzzlepets.TipoAnimal;
 
 public class PainelPrincipal extends Painel implements GridPanelEventHandler {
 
@@ -179,9 +200,12 @@ public class PainelPrincipal extends Painel implements GridPanelEventHandler {
 		// System.out.println("Largado em Linha: " + linha + " Coluna: " +
 		// coluna);
 		Posicao posicaoFinal = new Posicao(linha, coluna);
-		Sentido sentido = posicaoInicial.getSentido(posicaoFinal);
-		trocar(posicaoInicial, sentido);
-		// System.out.println(sentido.name());
+		if (posicaoFinal.isDentro(NUM_LINHAS, NUM_COLUNAS)) {
+			Sentido sentido = posicaoInicial.getSentido(posicaoFinal);
+
+			trocar(posicaoInicial, sentido);
+			// System.out.println(sentido.name());
+		}
 
 	}
 
@@ -191,35 +215,109 @@ public class PainelPrincipal extends Painel implements GridPanelEventHandler {
 		Posicao posicaoDestino = posicaoInicial.seguir(sentido);
 		Suportado suportadoOrigem = getSuportado(posicaoInicial);
 		Suportado suportadoDestino = getSuportado(posicaoDestino);
-		
-		if (!(suportadoOrigem instanceof Movivel) || !(suportadoDestino instanceof Movivel)){
+
+		if (!(suportadoOrigem instanceof Movivel) || !(suportadoDestino instanceof Movivel)) {
+
 			return;
+
 		}
-		if (!(suportadoOrigem instanceof Combinavel && suportadoDestino instanceof Combinavel)){
+		if (!(suportadoOrigem instanceof Combinavel && suportadoDestino instanceof Combinavel)) {
+			System.out.println("NAO SAO COMBINAVEIS");
 			return;
 		}
 		trocar(suportadoOrigem, suportadoDestino, sentido);
 	}
-	
 
 	private void trocar(Suportado suportadoOrigem, Suportado suportadoDestino, Sentido sentido) {
 		boolean existeCombinaçãoOrigem;
 		boolean existeCombinaçãoDestino;
-		existeCombinaçãoOrigem = suportadoOrigem instanceof Combinavel 
-				&& formaCombinacao(suportadoOrigem, sentido);
-		existeCombinaçãoDestino = suportadoDestino instanceof Combinavel 
-				&& formaCombinacao(suportadoDestino, sentido.getInverso());
-		
-		if (existeCombinaçãoOrigem){
-			//TODO poder que se forma
+		existeCombinaçãoOrigem = suportadoOrigem instanceof Combinavel
+				&& formaCombinacao((Combinavel) suportadoOrigem, sentido);
+		existeCombinaçãoDestino = suportadoDestino instanceof Combinavel
+				&& formaCombinacao((Combinavel) suportadoDestino, sentido.getInverso());
+
+		if (existeCombinaçãoOrigem) {
+			Poder poder = quePoderEFormado((Combinavel) suportadoOrigem, sentido);
+			if (poder != null) {
+				// TODO explodir o que combinou
+				System.out.println("combinação ORIGEM COM PODER");
+				// colocar(poder)
+				trocar((Movivel) suportadoOrigem, (Movivel) suportadoDestino);
+			} else {
+				System.out.println("combinação ORIGEM sem poder");
+			}
 		}
-		
-		
+		if (existeCombinaçãoDestino) {
+			Poder poder = quePoderEFormado((Combinavel) suportadoDestino, sentido.getInverso());
+			if (poder != null) {
+
+				// TODO explodir o que combinou
+				// colocar(poder)
+
+				System.out.println("combinação DESTINO COM PODER");
+				trocar((Movivel) suportadoOrigem, (Movivel) suportadoDestino);
+			} else {
+				System.out.println("combinação DESTINO sem poder");
+			}
+		}
+
 	}
 
-	private boolean formaCombinacao(Suportado suportadoOrigem, Sentido sentido) {
-		// TODO Auto-generated method stub
-		return false;
+	private Poder quePoderEFormado(Combinavel suportado, Sentido sentido) {
+		int mesmoSentido = contarCombinaveis(suportado, sentido);
+		int ortogonal = contarCombinaveis(suportado, sentido.getOrtogonal());
+		int inverso = contarCombinaveis(suportado, sentido.getInverso());
+
+		if (ortogonal == 2 && inverso == 2) {
+			return new PoderArcoIris();
+		}
+
+		if (mesmoSentido == 2 && ortogonal >= 1 && inverso >= 1) {
+			return new PoderEstrela(TipoAnimal.Panda);
+		}
+		if (mesmoSentido == 2 && (ortogonal == 2 || inverso == 2)) {
+			return new PoderCruz(TipoAnimal.Panda);
+		}
+		if ((ortogonal + inverso) == 3) {
+			if (sentido.isHorizontal()) {
+				return new PoderHorizontal(TipoAnimal.Panda);
+			} else {
+				return new PoderVertical(TipoAnimal.Panda);
+			}
+		}
+
+		return null;
+	}
+
+	private void trocar(Movivel movivelOrigem, Movivel movivelDestino) {
+		Suporte suporteOrigem = movivelOrigem.getSuporte();
+		Suporte suporteDestino = movivelDestino.getSuporte();
+
+		((SuporteComSuportado) suporteOrigem).colocar(movivelDestino);
+		((SuporteComSuportado) suporteDestino).colocar(movivelOrigem);
+
+	}
+
+	private boolean formaCombinacao(Combinavel combinavel, Sentido sentido) {
+		if (contarCombinaveis(combinavel, sentido) >= 2) {
+			return true;
+		}
+		return (contarCombinaveis(combinavel, sentido.getOrtogonal())
+				+ contarCombinaveis(combinavel, sentido.getOrtogonal().getInverso()) >= 2);
+	}
+
+	private int contarCombinaveis(Combinavel combinavel, Sentido sentido) {
+		Posicao posicaoAtual = combinavel.getPosicao();
+		int contador = 0;
+		do {
+			posicaoAtual = posicaoAtual.seguir(sentido);
+			if (getSuportado(posicaoAtual) instanceof Combinavel) {
+				if (combinavel.combinaCom(getSuportado(posicaoAtual))) {
+					contador++;
+				}
+			}
+		} while (combinavel != null);
+		return contador;
 	}
 
 	private Suportado getSuportado(Posicao posicao) {

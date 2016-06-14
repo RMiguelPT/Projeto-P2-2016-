@@ -1,5 +1,7 @@
 package pt.ipleiria.estg.dei.puzzlepets;
 
-public class Combinavel extends SuportadoPorGelo {
+public abstract class Combinavel extends SuportadoPorGelo {
+
+	public abstract boolean combinaCom(Suportado suportado);
 
 }
