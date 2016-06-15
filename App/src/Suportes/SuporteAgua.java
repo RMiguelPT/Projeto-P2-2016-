@@ -1,13 +1,13 @@
 package Suportes;
 
 import Paineis.PainelPrincipal;
+import Suportados.Cesto;
+import Suportados.Suportado;
 import pt.ipleiria.estg.dei.gridpanel.CellRepresentation;
 import pt.ipleiria.estg.dei.gridpanel.GridPanel;
 import pt.ipleiria.estg.dei.gridpanel.OverlayCellRepresentation;
 import pt.ipleiria.estg.dei.gridpanel.SingleImageCellRepresentation;
-import pt.ipleiria.estg.dei.puzzlepets.Cesto;
 import pt.ipleiria.estg.dei.puzzlepets.Posicao;
-import pt.ipleiria.estg.dei.puzzlepets.Suportado;
 
 public class SuporteAgua extends SuporteComSuportado<Suportado> {
 	

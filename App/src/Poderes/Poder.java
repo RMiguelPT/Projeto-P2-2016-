@@ -1,12 +1,12 @@
 package Poderes;
 
-import pt.ipleiria.estg.dei.puzzlepets.Representavel;
-import pt.ipleiria.estg.dei.puzzlepets.Suportado;
+import Suportados.Combinavel;
+import Suportados.Representavel;
+import Suportados.Suportado;
 
-public abstract class Poder extends Representavel {
+public abstract class Poder extends Combinavel {
 
 	public Poder() {
 		// TODO Auto-generated constructor stub
 	}
-	public abstract boolean combinaCom(Suportado suportado);
 }

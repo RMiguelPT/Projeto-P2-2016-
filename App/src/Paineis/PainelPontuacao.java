@@ -12,9 +12,11 @@ public class PainelPontuacao extends PainelValorImagem {
 		
 	}
 
-	public void incrementarValor(int valor)
-	{
-		
+	@Override
+	public void incrementarValor(int valor) {
+		//System.out.println(this.valor);
+		this.valor += valor;
+		this.atualizar();		
 	}
 	
 	public void decrementarValor()

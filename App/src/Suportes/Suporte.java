@@ -2,11 +2,11 @@ package Suportes;
 
 
 import Paineis.PainelPrincipal;
+import Suportados.Representavel;
+import Suportados.Suportado;
 import pt.ipleiria.estg.dei.gridpanel.GridPanel;
 import pt.ipleiria.estg.dei.puzzlepets.Posicao;
-import pt.ipleiria.estg.dei.puzzlepets.Representavel;
 import pt.ipleiria.estg.dei.puzzlepets.Sentido;
-import pt.ipleiria.estg.dei.puzzlepets.Suportado;
 
 
 public abstract class Suporte extends Representavel {

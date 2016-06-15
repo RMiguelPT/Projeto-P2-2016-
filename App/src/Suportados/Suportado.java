@@ -1,7 +1,10 @@
-package pt.ipleiria.estg.dei.puzzlepets;
+package Suportados;
 
 import Interfaces.Iteravel;
 import Suportes.SuporteComSuportado;
+import pt.ipleiria.estg.dei.puzzlepets.Posicao;
+import pt.ipleiria.estg.dei.puzzlepets.Sentido;
+import pt.ipleiria.estg.dei.puzzlepets.Temporizador;
 
 public abstract class Suportado<TSuporte extends SuporteComSuportado> extends Representavel implements Iteravel {
 	

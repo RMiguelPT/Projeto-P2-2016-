@@ -1,10 +1,10 @@
-package pt.ipleiria.estg.dei.puzzlepets;
+package Suportados;
 
 import Suportes.SuporteComSuportado;
 import pt.ipleiria.estg.dei.gridpanel.CellRepresentation;
 import pt.ipleiria.estg.dei.gridpanel.SingleImageCellRepresentation;
 
-public class Maca extends SuportadoPorGelo {
+public class Maca extends Movivel {
 
 	public Maca(SuporteComSuportado suporte) {
 		super();

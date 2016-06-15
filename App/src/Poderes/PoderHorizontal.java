@@ -1,8 +1,9 @@
 package Poderes;
 
+import Suportados.Combinavel;
+import Suportados.Movivel;
+import Suportados.Suportado;
 import pt.ipleiria.estg.dei.gridpanel.SingleImageCellRepresentation;
-import pt.ipleiria.estg.dei.puzzlepets.Combinavel;
-import pt.ipleiria.estg.dei.puzzlepets.Suportado;
 import pt.ipleiria.estg.dei.puzzlepets.TipoAnimal;
 
 public class PoderHorizontal extends PoderComAnimal {
@@ -28,13 +29,19 @@ public class PoderHorizontal extends PoderComAnimal {
 	}
 
 	@Override
-	public boolean combinaCom(Suportado suportado) {
+	public boolean combinaCom(Combinavel combinavel) {
 		// TODO Auto-generated method stub
 		return false;
 	}
 
 	@Override
 	public void iterar(long millis) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void explodir() {
 		// TODO Auto-generated method stub
 		
 	}

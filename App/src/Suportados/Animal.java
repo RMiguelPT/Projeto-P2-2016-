@@ -1,13 +1,16 @@
-package pt.ipleiria.estg.dei.puzzlepets;
+package Suportados;
 
 import Suportes.SuporteComSuportado;
+import Suportes.SuporteGelo;
 import pt.ipleiria.estg.dei.gridpanel.CellRepresentation;
 import pt.ipleiria.estg.dei.gridpanel.SingleImageCellRepresentation;
-import Interfaces.Combinavel;
+import pt.ipleiria.estg.dei.puzzlepets.Sentido;
+import pt.ipleiria.estg.dei.puzzlepets.TipoAnimal;
 import Interfaces.Iteravel;
 
-public class Animal extends SuportadoPorGelo  {
+public class Animal extends Combinavel  {
 	private TipoAnimal tipoAnimal;
+	private static final int PONTOS = 25;
 
 	public Animal(TipoAnimal tipo, SuporteComSuportado suporte) {
 		super();
@@ -32,14 +35,35 @@ public class Animal extends SuportadoPorGelo  {
 		this.suporte = suporte;
 
 	}
-	public boolean combinaCom(Suportado suportado){
-		if (suportado instanceof Animal){
-			if (this.tipoAnimal.equals(((Animal)suportado).tipoAnimal)){
+	public boolean combinaCom(Combinavel combinavel){		
+		if (combinavel instanceof Animal){
+			if (this.tipoAnimal.equals(((Animal)combinavel).tipoAnimal)){
+				
 				return true;
 			}
-		}
-		return false;
+		}		
+		return false;		
+	}
+	@Override
+	public void explodir() {
+		this.suporte.incrementarPontuacao(PONTOS);
 		
+		if (this.suporte instanceof SuporteGelo){
+			this.suporte.painelPrincipal.substituirPorAgua(this.suporte);
+		}
+		this.suporte.explodir();
+	}
+	
+	public void iterar(long millis){
+		if (temporizador.getMilissegundosEmFalta() == 0){
+			temporizador.reiniciar();
+			if(this.suporte.suportadoPodeCair(Sentido.S)){
+				this.suporte.fazerCairSuportado(Sentido.S);
+				this.suporte.painelPrincipal.criarCombinacoes(this, Sentido.S);
+			}
+			
+			
+		}
 	}
 
 }

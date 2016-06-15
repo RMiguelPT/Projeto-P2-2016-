@@ -1,10 +1,11 @@
 package Poderes;
 
-import Interfaces.Combinavel;
 import Interfaces.Iteravel;
-import pt.ipleiria.estg.dei.puzzlepets.Suportado;
+import Suportados.Combinavel;
+import Suportados.Movivel;
+import Suportados.Suportado;
 
-public class PoderArcoIris extends Poder implements Iteravel, Combinavel {
+public class PoderArcoIris extends Poder implements Iteravel {
 	
 
 	public PoderArcoIris() {
@@ -12,7 +13,7 @@ public class PoderArcoIris extends Poder implements Iteravel, Combinavel {
 	}
 
 	@Override
-	public boolean combinaCom(Suportado suportado) {
+	public boolean combinaCom(Combinavel combinavel) {
 		// TODO Auto-generated method stub
 		return false;
 	}
@@ -22,5 +23,12 @@ public class PoderArcoIris extends Poder implements Iteravel, Combinavel {
 		// TODO Auto-generated method stub
 		
 	}
+
+	@Override
+	public void explodir() {
+		// TODO Auto-generated method stub
+		
+	}
+
 
 }

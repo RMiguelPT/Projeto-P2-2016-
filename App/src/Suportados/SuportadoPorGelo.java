@@ -1,6 +1,5 @@
-package pt.ipleiria.estg.dei.puzzlepets;
+package Suportados;
 
-import Interfaces.Combinavel;
 import Suportes.SuporteGelo;
 
 public abstract class SuportadoPorGelo<S extends SuporteGelo> extends Movivel  {

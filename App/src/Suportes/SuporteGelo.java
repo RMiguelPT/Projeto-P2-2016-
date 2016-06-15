@@ -1,11 +1,11 @@
 package Suportes;
 
 import Paineis.PainelPrincipal;
+import Suportados.SuportadoPorGelo;
 import pt.ipleiria.estg.dei.gridpanel.GridPanel;
 import pt.ipleiria.estg.dei.gridpanel.OverlayCellRepresentation;
 import pt.ipleiria.estg.dei.gridpanel.SingleImageCellRepresentation;
 import pt.ipleiria.estg.dei.puzzlepets.Posicao;
-import pt.ipleiria.estg.dei.puzzlepets.SuportadoPorGelo;
 
 public class SuporteGelo extends SuporteComSuportado<SuportadoPorGelo> {
 	

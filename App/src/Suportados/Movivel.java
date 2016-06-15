@@ -1,4 +1,4 @@
-package pt.ipleiria.estg.dei.puzzlepets;
+package Suportados;
 
 public class Movivel extends Suportado {
 	

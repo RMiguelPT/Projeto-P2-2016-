@@ -1,14 +1,16 @@
 package Suportes;
 
 import Paineis.PainelPrincipal;
+import Suportados.Animal;
+import Suportados.Cesto;
+import Suportados.Combinavel;
+import Suportados.Maca;
+import Suportados.Suportado;
 import pt.ipleiria.estg.dei.gridpanel.CellRepresentation;
 import pt.ipleiria.estg.dei.gridpanel.GridPanel;
 import pt.ipleiria.estg.dei.gridpanel.OverlayCellRepresentation;
-import pt.ipleiria.estg.dei.puzzlepets.Cesto;
-import pt.ipleiria.estg.dei.puzzlepets.Maca;
 import pt.ipleiria.estg.dei.puzzlepets.Posicao;
 import pt.ipleiria.estg.dei.puzzlepets.Sentido;
-import pt.ipleiria.estg.dei.puzzlepets.Suportado;
 import pt.ipleiria.estg.dei.puzzlepets.Temporizador;
 
 public class SuporteComSuportado<TSuportado extends Suportado> extends Suporte {
@@ -82,6 +84,17 @@ public class SuporteComSuportado<TSuportado extends Suportado> extends Suporte {
 	
 	public Suportado getSuportado(){
 		return this.suportado;
+	}
+
+	public void explodir() {
+		this.suportado = null;
+		this.painelPrincipal.atualizar(this, this.posicao);
+		
+	}
+
+	public void incrementarPontuacao(int pontos) {
+		this.painelPrincipal.incrementarPontuacao(pontos);
+		
 	}
 
 }

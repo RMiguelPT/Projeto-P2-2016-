@@ -1,12 +1,13 @@
 package Poderes;
 
-import Interfaces.Combinavel;
 import Interfaces.Iteravel;
+import Suportados.Combinavel;
+import Suportados.Movivel;
+import Suportados.Suportado;
 import pt.ipleiria.estg.dei.gridpanel.SingleImageCellRepresentation;
-import pt.ipleiria.estg.dei.puzzlepets.Suportado;
 import pt.ipleiria.estg.dei.puzzlepets.TipoAnimal;
 
-public abstract class PoderComAnimal extends Poder implements Combinavel, Iteravel {
+public abstract class PoderComAnimal extends Poder implements Iteravel {
 	public TipoAnimal tipoAnimal;
 
 	public PoderComAnimal(TipoAnimal tipoAnimal) {
@@ -15,6 +16,6 @@ public abstract class PoderComAnimal extends Poder implements Combinavel, Iterav
 	}
 
 	@Override
-	public abstract boolean combinaCom(Suportado suportado);
+	public abstract boolean combinaCom(Combinavel combinavel);
 
 }

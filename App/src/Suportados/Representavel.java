@@ -1,4 +1,4 @@
-package pt.ipleiria.estg.dei.puzzlepets;
+package Suportados;
 
 import pt.ipleiria.estg.dei.gridpanel.CellRepresentation;
 

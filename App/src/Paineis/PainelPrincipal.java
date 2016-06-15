@@ -3,6 +3,10 @@ package Paineis;
 import pt.ipleiria.estg.dei.utils.FileHandler;
 
 import java.awt.event.MouseEvent;
+import java.util.Iterator;
+import java.util.LinkedList;
+
+import javax.swing.plaf.synth.SynthSeparatorUI;
 
 import Poderes.Poder;
 import Poderes.PoderArcoIris;
@@ -10,6 +14,12 @@ import Poderes.PoderCruz;
 import Poderes.PoderEstrela;
 import Poderes.PoderHorizontal;
 import Poderes.PoderVertical;
+import Suportados.Animal;
+import Suportados.Cesto;
+import Suportados.Combinavel;
+import Suportados.Maca;
+import Suportados.Movivel;
+import Suportados.Suportado;
 import Suportes.Suporte;
 import Suportes.SuporteAgua;
 import Suportes.SuporteAr;
@@ -18,15 +28,10 @@ import Suportes.SuporteGelo;
 import pt.ipleiria.estg.dei.gridpanel.CellRepresentation;
 import pt.ipleiria.estg.dei.gridpanel.GridPanel;
 import pt.ipleiria.estg.dei.gridpanel.GridPanelEventHandler;
-import pt.ipleiria.estg.dei.puzzlepets.Animal;
-import pt.ipleiria.estg.dei.puzzlepets.Cesto;
-import pt.ipleiria.estg.dei.puzzlepets.Combinavel;
+import pt.ipleiria.estg.dei.puzzlepets.Combinacao;
 import pt.ipleiria.estg.dei.puzzlepets.Jogo;
-import pt.ipleiria.estg.dei.puzzlepets.Maca;
-import pt.ipleiria.estg.dei.puzzlepets.Movivel;
 import pt.ipleiria.estg.dei.puzzlepets.Posicao;
 import pt.ipleiria.estg.dei.puzzlepets.Sentido;
-import pt.ipleiria.estg.dei.puzzlepets.Suportado;
 import pt.ipleiria.estg.dei.puzzlepets.TipoAnimal;
 
 public class PainelPrincipal extends Painel implements GridPanelEventHandler {
@@ -55,11 +60,13 @@ public class PainelPrincipal extends Painel implements GridPanelEventHandler {
 
 	private static final int NUM_LINHAS = 8;
 	private static final int NUM_COLUNAS = 8;
+	LinkedList<Combinavel> combinacao;
 
 	public PainelPrincipal(GridPanel grelha, Jogo jogo) {
 		super(grelha);
 		this.jogo = jogo;
 		matriz = new Suporte[grelha.getNumberOfRows()][grelha.getNumberOfColumns()];
+		this.combinacao = new LinkedList<>();
 
 		lerFicheiro();
 
@@ -133,8 +140,10 @@ public class PainelPrincipal extends Painel implements GridPanelEventHandler {
 		matriz[suporte.getPosicao().getLinha()][suporte.getPosicao().getColuna()] = suporte;
 	}
 
-	private void substituirPorAgua(SuporteGelo gelo) {
-
+	public void substituirPorAgua(SuporteComSuportado suporte) {
+		Posicao posicao = suporte.getPosicao();
+		matriz[posicao.getLinha()][posicao.getColuna()] = null;
+		matriz[posicao.getLinha()][posicao.getColuna()] = new SuporteAgua(this, posicao);
 	}
 
 	public void iterar(long tempo) {
@@ -145,6 +154,21 @@ public class PainelPrincipal extends Painel implements GridPanelEventHandler {
 				}
 			}
 		}
+
+		gerarAleatorios();
+	}
+
+	private void gerarAleatorios() {
+		for (int i = 0; i < NUM_COLUNAS; i++) {
+			if (getSuporte(new Posicao(0, i)) instanceof SuporteComSuportado) {
+				SuporteComSuportado suporte = (SuporteComSuportado) getSuporte(new Posicao(0, i));
+				if (suporte.getSuportado() == null) {
+					suporte.colocar(new Animal(TipoAnimal.getRandomAnimal(), suporte));
+				}
+			}
+
+		}
+
 	}
 
 	public void atualizar(Suporte suporte, Posicao posicao) {
@@ -190,80 +214,124 @@ public class PainelPrincipal extends Painel implements GridPanelEventHandler {
 
 	@Override
 	public void mousePressed(MouseEvent evt, int linha, int coluna) {
-		// System.out.println("Pressionado em Linha: " + linha + " Coluna: " +
-		// coluna);
-		posicaoInicial = new Posicao(linha, coluna);
+
+		this.posicaoInicial = new Posicao(linha, coluna);
+
 	}
 
 	@Override
 	public void mouseReleased(MouseEvent evt, int linha, int coluna) {
-		// System.out.println("Largado em Linha: " + linha + " Coluna: " +
-		// coluna);
-		Posicao posicaoFinal = new Posicao(linha, coluna);
-		if (posicaoFinal.isDentro(NUM_LINHAS, NUM_COLUNAS)) {
-			Sentido sentido = posicaoInicial.getSentido(posicaoFinal);
 
+		Posicao posicaoFinal = new Posicao(linha, coluna);
+
+		if (posicaoFinal.isDentro(NUM_LINHAS, NUM_COLUNAS) && !(this.posicaoInicial.equals(posicaoFinal))) {
+			// System.out.println("IS DENTRO && POSICAO FINAL != POSICAO
+			// INICIAL");
+			Sentido sentido = posicaoInicial.getSentido(posicaoFinal);
 			trocar(posicaoInicial, sentido);
-			// System.out.println(sentido.name());
+
 		}
 
 	}
 
 	private void trocar(Posicao posicaoInicial, Sentido sentido) {
-		// System.out.println(""+ posicaoInicial.getLinha() +
-		// posicaoInicial.getColuna()+ sentido.name() );
+		this.combinacao = new LinkedList<>();
+
 		Posicao posicaoDestino = posicaoInicial.seguir(sentido);
 		Suportado suportadoOrigem = getSuportado(posicaoInicial);
 		Suportado suportadoDestino = getSuportado(posicaoDestino);
 
 		if (!(suportadoOrigem instanceof Movivel) || !(suportadoDestino instanceof Movivel)) {
-
 			return;
 
 		}
 		if (!(suportadoOrigem instanceof Combinavel && suportadoDestino instanceof Combinavel)) {
-			System.out.println("NAO SAO COMBINAVEIS");
+
 			return;
 		}
 		trocar(suportadoOrigem, suportadoDestino, sentido);
 	}
 
 	private void trocar(Suportado suportadoOrigem, Suportado suportadoDestino, Sentido sentido) {
+
 		boolean existeCombinaçãoOrigem;
 		boolean existeCombinaçãoDestino;
+
+		trocar((Movivel) suportadoOrigem, (Movivel) suportadoDestino);
 		existeCombinaçãoOrigem = suportadoOrigem instanceof Combinavel
 				&& formaCombinacao((Combinavel) suportadoOrigem, sentido);
 		existeCombinaçãoDestino = suportadoDestino instanceof Combinavel
 				&& formaCombinacao((Combinavel) suportadoDestino, sentido.getInverso());
-
 		if (existeCombinaçãoOrigem) {
 			Poder poder = quePoderEFormado((Combinavel) suportadoOrigem, sentido);
 			if (poder != null) {
+
 				// TODO explodir o que combinou
-				System.out.println("combinação ORIGEM COM PODER");
+				// System.out.println("combinação ORIGEM COM PODER");
 				// colocar(poder)
-				trocar((Movivel) suportadoOrigem, (Movivel) suportadoDestino);
-			} else {
-				System.out.println("combinação ORIGEM sem poder");
+
 			}
-		}
-		if (existeCombinaçãoDestino) {
+			LinkedList<Combinavel> combinacaoOrigem = new LinkedList<>();
+			combinacaoOrigem.add((Combinavel) suportadoOrigem);
+			
+			if ( criarCombinacoes((Combinavel) suportadoOrigem, sentido).size() >=2 ){
+				combinacaoOrigem.addAll(criarCombinacoes((Combinavel) suportadoOrigem, sentido));
+			}
+			if (criarCombinacoes((Combinavel) suportadoOrigem, sentido.getOrtogonal()).size() >= 2){
+				combinacaoOrigem.addAll(criarCombinacoes((Combinavel) suportadoOrigem, sentido.getOrtogonal()));
+			}
+			if (criarCombinacoes((Combinavel) suportadoOrigem, sentido.getOrtogonal().getInverso()).size() >= 2){
+				combinacaoOrigem.addAll(criarCombinacoes((Combinavel) suportadoOrigem, sentido.getOrtogonal().getInverso()));
+			}
+			
+			
+			for (Combinavel elemento : combinacaoOrigem) {
+				System.out.println("ORIGEM: " + elemento.toString());
+
+				elemento.explodir();
+			}
+			//
+			combinacao.clear();
+		} else if (existeCombinaçãoDestino) {
 			Poder poder = quePoderEFormado((Combinavel) suportadoDestino, sentido.getInverso());
 			if (poder != null) {
 
 				// TODO explodir o que combinou
 				// colocar(poder)
+				// System.out.println("combinação DESTINO COM PODER");
 
-				System.out.println("combinação DESTINO COM PODER");
-				trocar((Movivel) suportadoOrigem, (Movivel) suportadoDestino);
-			} else {
-				System.out.println("combinação DESTINO sem poder");
 			}
+			System.out.println("combinação destino");
+			// trocar((Movivel) suportadoOrigem, (Movivel) suportadoDestino);
+			LinkedList<Combinavel> combinacaoDestino = new LinkedList<>();
+			combinacaoDestino.add((Combinavel) suportadoDestino);
+			
+			if ( criarCombinacoes((Combinavel) suportadoDestino, sentido.getInverso()).size() >=2 ){
+				combinacaoDestino.addAll(criarCombinacoes((Combinavel) suportadoDestino, sentido.getInverso()));
+			}
+			if (criarCombinacoes((Combinavel) suportadoDestino, sentido.getInverso().getOrtogonal()).size() >= 2){
+				combinacaoDestino.addAll(criarCombinacoes((Combinavel) suportadoDestino, sentido.getInverso().getOrtogonal()));
+			}
+			if (criarCombinacoes((Combinavel) suportadoDestino, sentido.getInverso().getOrtogonal().getInverso()).size() >= 2){
+				combinacaoDestino.addAll(criarCombinacoes((Combinavel) suportadoDestino, sentido.getInverso().getOrtogonal().getInverso()));
+			}
+			for (Combinavel elemento : combinacaoDestino) {
+				System.out.println("Destino: " + elemento.toString());
+				elemento.explodir();
+
+			}
+
+			combinacao.clear();
+
+		} else {
+			trocar((Movivel) suportadoDestino, (Movivel) suportadoOrigem);
+			combinacao.clear();
 		}
 
 	}
 
 	private Poder quePoderEFormado(Combinavel suportado, Sentido sentido) {
+
 		int mesmoSentido = contarCombinaveis(suportado, sentido);
 		int ortogonal = contarCombinaveis(suportado, sentido.getOrtogonal());
 		int inverso = contarCombinaveis(suportado, sentido.getInverso());
@@ -290,9 +358,9 @@ public class PainelPrincipal extends Painel implements GridPanelEventHandler {
 	}
 
 	private void trocar(Movivel movivelOrigem, Movivel movivelDestino) {
+
 		Suporte suporteOrigem = movivelOrigem.getSuporte();
 		Suporte suporteDestino = movivelDestino.getSuporte();
-
 		((SuporteComSuportado) suporteOrigem).colocar(movivelDestino);
 		((SuporteComSuportado) suporteDestino).colocar(movivelOrigem);
 
@@ -302,22 +370,53 @@ public class PainelPrincipal extends Painel implements GridPanelEventHandler {
 		if (contarCombinaveis(combinavel, sentido) >= 2) {
 			return true;
 		}
-		return (contarCombinaveis(combinavel, sentido.getOrtogonal())
-				+ contarCombinaveis(combinavel, sentido.getOrtogonal().getInverso()) >= 2);
+		if (contarCombinaveis(combinavel, sentido.getOrtogonal())
+				+ contarCombinaveis(combinavel, sentido.getOrtogonal().getInverso()) >= 2) {
+			return true;
+		}
+		return false;
 	}
 
 	private int contarCombinaveis(Combinavel combinavel, Sentido sentido) {
 		Posicao posicaoAtual = combinavel.getPosicao();
 		int contador = 0;
+
 		do {
 			posicaoAtual = posicaoAtual.seguir(sentido);
-			if (getSuportado(posicaoAtual) instanceof Combinavel) {
-				if (combinavel.combinaCom(getSuportado(posicaoAtual))) {
-					contador++;
+			if (posicaoAtual.isDentro(NUM_LINHAS, NUM_COLUNAS)) {
+				if (getSuportado(posicaoAtual) instanceof Combinavel) {
+					if (combinavel.combinaCom((Combinavel) getSuportado(posicaoAtual))) {
+						contador++;
+						//this.combinacao.add((Combinavel) getSuportado(posicaoAtual));
+					}
 				}
 			}
-		} while (combinavel != null);
+
+		} while (getSuportado(posicaoAtual) instanceof Combinavel
+				&& combinavel.combinaCom((Combinavel) getSuportado(posicaoAtual)));
+
+		//this.combinacao.add(combinavel);
 		return contador;
+	}
+	
+	public LinkedList<Combinavel> criarCombinacoes(Combinavel combinavel, Sentido sentido){
+		Posicao posicaoAtual = combinavel.getPosicao();
+		LinkedList<Combinavel> combinacao = new LinkedList<>();
+
+		do {
+			posicaoAtual = posicaoAtual.seguir(sentido);
+			if (posicaoAtual.isDentro(NUM_LINHAS, NUM_COLUNAS)) {
+				if (getSuportado(posicaoAtual) instanceof Combinavel) {
+					if (combinavel.combinaCom((Combinavel) getSuportado(posicaoAtual))) {
+						combinacao.add((Combinavel) getSuportado(posicaoAtual));
+					}
+				}
+			}
+
+		} while (getSuportado(posicaoAtual) instanceof Combinavel
+				&& combinavel.combinaCom((Combinavel) getSuportado(posicaoAtual)));
+		
+		return combinacao;
 	}
 
 	private Suportado getSuportado(Posicao posicao) {
@@ -330,6 +429,11 @@ public class PainelPrincipal extends Painel implements GridPanelEventHandler {
 			}
 		}
 		return null;
+	}
+
+	public void incrementarPontuacao(int pontos) {
+		this.jogo.incrementarPontuacao(pontos);
+
 	}
 
 }

@@ -29,7 +29,7 @@ public class Jogo {
 
 	public void incrementarPontuacao(int pontos)
 	{
-		
+		this.painelPontuacao.incrementarValor(pontos);
 	}
 	
 	public void decrementarMacas()
