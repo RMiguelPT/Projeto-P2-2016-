@@ -258,11 +258,15 @@ public class PainelPrincipal extends Painel implements GridPanelEventHandler {
 		boolean existeCombinaçãoDestino;
 
 		trocar((Movivel) suportadoOrigem, (Movivel) suportadoDestino);
-		existeCombinaçãoOrigem = suportadoOrigem instanceof Combinavel
-				&& formaCombinacao((Combinavel) suportadoOrigem, sentido);
-		existeCombinaçãoDestino = suportadoDestino instanceof Combinavel
-				&& formaCombinacao((Combinavel) suportadoDestino, sentido.getInverso());
-		if (existeCombinaçãoOrigem) {
+//		existeCombinaçãoOrigem = suportadoOrigem instanceof Combinavel
+//				&& formaCombinacao((Combinavel) suportadoOrigem, sentido);
+//		existeCombinaçãoDestino = suportadoDestino instanceof Combinavel
+//				&& formaCombinacao((Combinavel) suportadoDestino, sentido.getInverso());
+		
+		LinkedList<Combinavel> combOrigem = criarCombinacoes((Combinavel) suportadoOrigem, sentido);
+		LinkedList<Combinavel> combDestino = criarCombinacoes((Combinavel) suportadoDestino, sentido.getInverso());
+		
+		if (combOrigem.size()>= 2) {
 			Poder poder = quePoderEFormado((Combinavel) suportadoOrigem, sentido);
 			if (poder != null) {
 
@@ -271,28 +275,17 @@ public class PainelPrincipal extends Painel implements GridPanelEventHandler {
 				// colocar(poder)
 
 			}
-			LinkedList<Combinavel> combinacaoOrigem = new LinkedList<>();
-			combinacaoOrigem.add((Combinavel) suportadoOrigem);
+
+			combOrigem.add((Combinavel) suportadoOrigem);
 			
-			if ( criarCombinacoes((Combinavel) suportadoOrigem, sentido).size() >=2 ){
-				combinacaoOrigem.addAll(criarCombinacoes((Combinavel) suportadoOrigem, sentido));
-			}
-			if (criarCombinacoes((Combinavel) suportadoOrigem, sentido.getOrtogonal()).size() >= 2){
-				combinacaoOrigem.addAll(criarCombinacoes((Combinavel) suportadoOrigem, sentido.getOrtogonal()));
-			}
-			if (criarCombinacoes((Combinavel) suportadoOrigem, sentido.getOrtogonal().getInverso()).size() >= 2){
-				combinacaoOrigem.addAll(criarCombinacoes((Combinavel) suportadoOrigem, sentido.getOrtogonal().getInverso()));
-			}
-			
-			
-			for (Combinavel elemento : combinacaoOrigem) {
+			for (Combinavel elemento : combOrigem) {
 				System.out.println("ORIGEM: " + elemento.toString());
 
 				elemento.explodir();
 			}
 			//
 			combinacao.clear();
-		} else if (existeCombinaçãoDestino) {
+		} else if (combDestino.size()>=2) {
 			Poder poder = quePoderEFormado((Combinavel) suportadoDestino, sentido.getInverso());
 			if (poder != null) {
 
@@ -302,20 +295,9 @@ public class PainelPrincipal extends Painel implements GridPanelEventHandler {
 
 			}
 			System.out.println("combinação destino");
-			// trocar((Movivel) suportadoOrigem, (Movivel) suportadoDestino);
-			LinkedList<Combinavel> combinacaoDestino = new LinkedList<>();
-			combinacaoDestino.add((Combinavel) suportadoDestino);
 			
-			if ( criarCombinacoes((Combinavel) suportadoDestino, sentido.getInverso()).size() >=2 ){
-				combinacaoDestino.addAll(criarCombinacoes((Combinavel) suportadoDestino, sentido.getInverso()));
-			}
-			if (criarCombinacoes((Combinavel) suportadoDestino, sentido.getInverso().getOrtogonal()).size() >= 2){
-				combinacaoDestino.addAll(criarCombinacoes((Combinavel) suportadoDestino, sentido.getInverso().getOrtogonal()));
-			}
-			if (criarCombinacoes((Combinavel) suportadoDestino, sentido.getInverso().getOrtogonal().getInverso()).size() >= 2){
-				combinacaoDestino.addAll(criarCombinacoes((Combinavel) suportadoDestino, sentido.getInverso().getOrtogonal().getInverso()));
-			}
-			for (Combinavel elemento : combinacaoDestino) {
+			combDestino.add((Combinavel) suportadoDestino);
+			for (Combinavel elemento : combDestino) {
 				System.out.println("Destino: " + elemento.toString());
 				elemento.explodir();
 
@@ -323,7 +305,8 @@ public class PainelPrincipal extends Painel implements GridPanelEventHandler {
 
 			combinacao.clear();
 
-		} else {
+	} 
+			else {
 			trocar((Movivel) suportadoDestino, (Movivel) suportadoOrigem);
 			combinacao.clear();
 		}
@@ -387,7 +370,6 @@ public class PainelPrincipal extends Painel implements GridPanelEventHandler {
 				if (getSuportado(posicaoAtual) instanceof Combinavel) {
 					if (combinavel.combinaCom((Combinavel) getSuportado(posicaoAtual))) {
 						contador++;
-						//this.combinacao.add((Combinavel) getSuportado(posicaoAtual));
 					}
 				}
 			}
@@ -395,29 +377,60 @@ public class PainelPrincipal extends Painel implements GridPanelEventHandler {
 		} while (getSuportado(posicaoAtual) instanceof Combinavel
 				&& combinavel.combinaCom((Combinavel) getSuportado(posicaoAtual)));
 
-		//this.combinacao.add(combinavel);
 		return contador;
 	}
-	
-	public LinkedList<Combinavel> criarCombinacoes(Combinavel combinavel, Sentido sentido){
-		Posicao posicaoAtual = combinavel.getPosicao();
-		LinkedList<Combinavel> combinacao = new LinkedList<>();
 
-		do {
+	public LinkedList<Combinavel> criarCombinacoes(Combinavel combinavel, Sentido sentido) {
+		Posicao posicaoInicial = combinavel.getPosicao();
+		LinkedList<Combinavel> combinacao = new LinkedList<>();
+		LinkedList<Combinavel> mesmoSentido = new LinkedList<>();
+		LinkedList<Combinavel> ortogonais = new LinkedList<>();
+
+		Posicao posicaoAtual = posicaoInicial;
+		for (int i = 0; i < 2; i++) {
 			posicaoAtual = posicaoAtual.seguir(sentido);
 			if (posicaoAtual.isDentro(NUM_LINHAS, NUM_COLUNAS)) {
 				if (getSuportado(posicaoAtual) instanceof Combinavel) {
 					if (combinavel.combinaCom((Combinavel) getSuportado(posicaoAtual))) {
-						combinacao.add((Combinavel) getSuportado(posicaoAtual));
+						mesmoSentido.add((Combinavel) getSuportado(posicaoAtual));
 					}
 				}
 			}
-
-		} while (getSuportado(posicaoAtual) instanceof Combinavel
-				&& combinavel.combinaCom((Combinavel) getSuportado(posicaoAtual)));
+		}
+		posicaoAtual = posicaoInicial;
+		for (int i = 0; i < 2; i++) {
+			posicaoAtual = posicaoAtual.seguir(sentido.getOrtogonal());
+			if (posicaoAtual.isDentro(NUM_LINHAS, NUM_COLUNAS)) {
+				if (getSuportado(posicaoAtual) instanceof Combinavel) {
+					if (combinavel.combinaCom((Combinavel) getSuportado(posicaoAtual))) {
+						ortogonais.add((Combinavel) getSuportado(posicaoAtual));
+					}
+				}
+			}
+		}
 		
+		posicaoAtual = posicaoInicial;
+		for (int i = 0; i < 2; i++) {
+			posicaoAtual = posicaoAtual.seguir(sentido.getOrtogonal().getInverso());
+			if (posicaoAtual.isDentro(NUM_LINHAS, NUM_COLUNAS)) {
+				if (getSuportado(posicaoAtual) instanceof Combinavel) {
+					if (combinavel.combinaCom((Combinavel) getSuportado(posicaoAtual))) {
+						ortogonais.add((Combinavel) getSuportado(posicaoAtual));
+					}
+				}
+			}
+		}
+
+		if (mesmoSentido.size() >= 2) {
+			combinacao.addAll(mesmoSentido);
+		}
+		if (ortogonais.size() >= 2) {
+			combinacao.addAll(ortogonais);
+		}
+
 		return combinacao;
 	}
+	
 
 	private Suportado getSuportado(Posicao posicao) {
 		Suporte suporte = null;

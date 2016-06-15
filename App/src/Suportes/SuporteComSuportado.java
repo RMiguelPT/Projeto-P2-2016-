@@ -79,6 +79,10 @@ public class SuporteComSuportado<TSuportado extends Suportado> extends Suporte {
 
 		} else {
 			colocar((TSuportado) suportado);
+			if (suportado instanceof Combinavel){
+				painelPrincipal.criarCombinacoes((Combinavel)suportado, sentido);
+			}
+			
 		}
 	}
 	
