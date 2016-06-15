@@ -256,19 +256,30 @@ public class PainelPrincipal extends Painel implements GridPanelEventHandler {
 
 		boolean existeCombinaçãoOrigem;
 		boolean existeCombinaçãoDestino;
+		SuporteComSuportado suporteOrigem = suportadoOrigem.getSuporte();
+		SuporteComSuportado suporteDestino = suportadoDestino.getSuporte();
 
 		trocar((Movivel) suportadoOrigem, (Movivel) suportadoDestino);
-//		existeCombinaçãoOrigem = suportadoOrigem instanceof Combinavel
-//				&& formaCombinacao((Combinavel) suportadoOrigem, sentido);
-//		existeCombinaçãoDestino = suportadoDestino instanceof Combinavel
-//				&& formaCombinacao((Combinavel) suportadoDestino, sentido.getInverso());
-		
+		// existeCombinaçãoOrigem = suportadoOrigem instanceof Combinavel
+		// && formaCombinacao((Combinavel) suportadoOrigem, sentido);
+		// existeCombinaçãoDestino = suportadoDestino instanceof Combinavel
+		// && formaCombinacao((Combinavel) suportadoDestino,
+		// sentido.getInverso());
+
 		LinkedList<Combinavel> combOrigem = criarCombinacoes((Combinavel) suportadoOrigem, sentido);
 		LinkedList<Combinavel> combDestino = criarCombinacoes((Combinavel) suportadoDestino, sentido.getInverso());
-		
-		if (combOrigem.size()>= 2) {
+
+		if (combOrigem.size() >= 2) {
 			Poder poder = quePoderEFormado((Combinavel) suportadoOrigem, sentido);
+			combOrigem.add((Combinavel) suportadoOrigem);
+			for (Combinavel elemento : combOrigem) {
+				System.out.println("ORIGEM: " + elemento.toString());
+
+				elemento.explodir();
+			}
 			if (poder != null) {
+
+				suporteDestino.colocar(poder);
 
 				// TODO explodir o que combinou
 				// System.out.println("combinação ORIGEM COM PODER");
@@ -276,37 +287,29 @@ public class PainelPrincipal extends Painel implements GridPanelEventHandler {
 
 			}
 
-			combOrigem.add((Combinavel) suportadoOrigem);
-			
-			for (Combinavel elemento : combOrigem) {
-				System.out.println("ORIGEM: " + elemento.toString());
-
-				elemento.explodir();
-			}
+			// combOrigem.add((Combinavel) suportadoOrigem);
 			//
-			combinacao.clear();
-		} else if (combDestino.size()>=2) {
+			// for (Combinavel elemento : combOrigem) {
+			// System.out.println("ORIGEM: " + elemento.toString());
+			//
+			// elemento.explodir();
+			// }
+			//
+
+		} else if (combDestino.size() >= 2) {
 			Poder poder = quePoderEFormado((Combinavel) suportadoDestino, sentido.getInverso());
-			if (poder != null) {
-
-				// TODO explodir o que combinou
-				// colocar(poder)
-				// System.out.println("combinação DESTINO COM PODER");
-
-			}
-			System.out.println("combinação destino");
-			
 			combDestino.add((Combinavel) suportadoDestino);
 			for (Combinavel elemento : combDestino) {
-				System.out.println("Destino: " + elemento.toString());
+				// System.out.println("Destino: " + elemento.toString());
 				elemento.explodir();
 
 			}
+			if (poder != null) {
+				suporteOrigem.colocar(poder);
+			}
+			// System.out.println("combinação destino");
 
-			combinacao.clear();
-
-	} 
-			else {
+		} else {
 			trocar((Movivel) suportadoDestino, (Movivel) suportadoOrigem);
 			combinacao.clear();
 		}
@@ -317,22 +320,28 @@ public class PainelPrincipal extends Painel implements GridPanelEventHandler {
 
 		int mesmoSentido = contarCombinaveis(suportado, sentido);
 		int ortogonal = contarCombinaveis(suportado, sentido.getOrtogonal());
-		int inverso = contarCombinaveis(suportado, sentido.getInverso());
+		int inverso = contarCombinaveis(suportado, sentido.getOrtogonal().getInverso());
 
 		if (ortogonal == 2 && inverso == 2) {
+			System.out.println("PODER ARCOIRIS");
 			return new PoderArcoIris();
+
 		}
 
 		if (mesmoSentido == 2 && ortogonal >= 1 && inverso >= 1) {
+			System.out.println("PODER ESTRELA");
 			return new PoderEstrela(TipoAnimal.Panda);
 		}
 		if (mesmoSentido == 2 && (ortogonal == 2 || inverso == 2)) {
+			System.out.println("PODER CRUZ");
 			return new PoderCruz(TipoAnimal.Panda);
 		}
 		if ((ortogonal + inverso) == 3) {
 			if (sentido.isHorizontal()) {
+				System.out.println("PODER HORIZONTAL");
 				return new PoderHorizontal(TipoAnimal.Panda);
 			} else {
+				System.out.println("PODER VERTICAL");
 				return new PoderVertical(TipoAnimal.Panda);
 			}
 		}
@@ -408,7 +417,7 @@ public class PainelPrincipal extends Painel implements GridPanelEventHandler {
 				}
 			}
 		}
-		
+
 		posicaoAtual = posicaoInicial;
 		for (int i = 0; i < 2; i++) {
 			posicaoAtual = posicaoAtual.seguir(sentido.getOrtogonal().getInverso());
@@ -430,7 +439,6 @@ public class PainelPrincipal extends Painel implements GridPanelEventHandler {
 
 		return combinacao;
 	}
-	
 
 	private Suportado getSuportado(Posicao posicao) {
 		Suporte suporte = null;

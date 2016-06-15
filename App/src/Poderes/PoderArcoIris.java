@@ -18,11 +18,11 @@ public class PoderArcoIris extends Poder implements Iteravel {
 		return false;
 	}
 
-	@Override
-	public void iterar(long millis) {
-		// TODO Auto-generated method stub
-		
-	}
+//	@Override
+//	public void iterar(long millis) {
+//		// TODO Auto-generated method stub
+//		
+//	}
 
 	@Override
 	public void explodir() {

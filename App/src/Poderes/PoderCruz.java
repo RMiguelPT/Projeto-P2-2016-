@@ -1,4 +1,5 @@
 package Poderes;
+import Interfaces.Iteravel;
 import Suportados.Combinavel;
 import Suportados.Movivel;
 import Suportados.Suportado;
@@ -33,11 +34,11 @@ public class PoderCruz extends PoderComAnimal {
 		return false;
 	}
 
-	@Override
-	public void iterar(long millis) {
-		// TODO Auto-generated method stub
-		
-	}
+//	@Override
+//	public void iterar(long millis) {
+//		// TODO Auto-generated method stub
+//		
+//	}
 
 	@Override
 	public void explodir() {
