@@ -28,7 +28,6 @@ import Suportes.SuporteGelo;
 import pt.ipleiria.estg.dei.gridpanel.CellRepresentation;
 import pt.ipleiria.estg.dei.gridpanel.GridPanel;
 import pt.ipleiria.estg.dei.gridpanel.GridPanelEventHandler;
-import pt.ipleiria.estg.dei.puzzlepets.Combinacao;
 import pt.ipleiria.estg.dei.puzzlepets.Jogo;
 import pt.ipleiria.estg.dei.puzzlepets.Posicao;
 import pt.ipleiria.estg.dei.puzzlepets.Sentido;

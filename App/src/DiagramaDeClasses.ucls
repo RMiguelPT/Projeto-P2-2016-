@@ -1,647 +1,664 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<class-diagram version="1.1.9" icons="true" always-add-relationships="false" generalizations="true" realizations="true" 
-  associations="true" dependencies="false" nesting-relationships="true" router="FAN">  
-  <class id="1" language="java" name="Suportes.Suporte" project="PuzzlePets" 
-    file="/PuzzlePets/src/Suportes/Suporte.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="135" width="302" x="751" y="999"/>    
+<class-diagram version="1.1.9" icons="true" automaticImage="JPEG" always-add-relationships="false" 
+  generalizations="true" realizations="true" associations="true" dependencies="false" nesting-relationships="true" 
+  router="FAN">  
+  <class id="1" language="java" name="Suportes.Suporte" project="2130664_RubenBernardo_2130774_RicardoVicente" 
+    file="/2130664_RubenBernardo_2130774_RicardoVicente/src/Suportes/Suporte.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="559" y="1217"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="2" language="java" name="Suportes.SuporteGelo" project="PuzzlePets" 
-    file="/PuzzlePets/src/Suportes/SuporteGelo.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="81" width="203" x="429" y="1799"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </class>  
-  <class id="3" language="java" name="Suportes.SuporteComSuportado" project="PuzzlePets" 
-    file="/PuzzlePets/src/Suportes/SuporteComSuportado.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="279" width="297" x="429" y="1444"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </class>  
-  <class id="4" language="java" name="Suportes.SuporteAgua" project="PuzzlePets" 
-    file="/PuzzlePets/src/Suportes/SuporteAgua.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="99" width="207" x="672" y="1799"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </class>  
-  <class id="5" language="java" name="Suportes.SuporteAr" project="PuzzlePets" 
-    file="/PuzzlePets/src/Suportes/SuporteAr.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="117" width="297" x="766" y="1444"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </class>  
-  <class id="6" language="java" name="Suportados.Movivel" project="PuzzlePets" 
-    file="/PuzzlePets/src/Suportados/Movivel.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="81" width="87" x="605" y="1992"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </class>  
-  <class id="7" language="java" name="Suportados.Maca" project="PuzzlePets" file="/PuzzlePets/src/Suportados/Maca.java" 
-    binary="false" corner="BOTTOM_RIGHT">    
-    <position height="81" width="169" x="921" y="2203"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </class>  
-  <class id="8" language="java" name="Suportados.Representavel" project="PuzzlePets" 
-    file="/PuzzlePets/src/Suportados/Representavel.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="117" width="178" x="275" y="212"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </class>  
-  <class id="9" language="java" name="Suportados.SuportadoPorGelo" project="PuzzlePets" 
-    file="/PuzzlePets/src/Suportados/SuportadoPorGelo.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="81" width="151" x="605" y="2203"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </class>  
-  <class id="10" language="java" name="Suportados.Animal" project="PuzzlePets" 
-    file="/PuzzlePets/src/Suportados/Animal.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="153" width="230" x="1304" y="2360"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </class>  
-  <class id="11" language="java" name="Suportados.Suportado" project="PuzzlePets" 
-    file="/PuzzlePets/src/Suportados/Suportado.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="153" width="154" x="235" y="1799"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </class>  
-  <class id="12" language="java" name="Suportados.Combinavel" project="PuzzlePets" 
-    file="/PuzzlePets/src/Suportados/Combinavel.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="117" width="202" x="1130" y="2203"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </class>  
-  <class id="13" language="java" name="Suportados.Cesto" project="PuzzlePets" 
-    file="/PuzzlePets/src/Suportados/Cesto.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="117" width="171" x="275" y="1992"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </class>  
-  <class id="14" language="java" name="pt.ipleiria.estg.dei.puzzlepets.Combinacao" project="PuzzlePets" 
-    file="/PuzzlePets/src/pt/ipleiria/estg/dei/puzzlepets/Combinacao.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="99" width="216" x="1077" y="1992"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </class>  
-  <enumeration id="15" language="java" name="pt.ipleiria.estg.dei.puzzlepets.TipoAnimal" project="PuzzlePets" 
-    file="/PuzzlePets/src/pt/ipleiria/estg/dei/puzzlepets/TipoAnimal.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="243" width="175" x="590" y="2867"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </enumeration>  
-  <class id="16" language="java" name="pt.ipleiria.estg.dei.puzzlepets.Enimigo" project="PuzzlePets" 
-    file="/PuzzlePets/src/pt/ipleiria/estg/dei/puzzlepets/Enimigo.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="81" width="129" x="85" y="1992"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </class>  
-  <class id="17" language="java" name="pt.ipleiria.estg.dei.puzzlepets.Jogo" project="PuzzlePets" 
-    file="/PuzzlePets/src/pt/ipleiria/estg/dei/puzzlepets/Jogo.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="189" width="250" x="1581" y="999"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </class>  
-  <class id="18" language="java" name="pt.ipleiria.estg.dei.puzzlepets.EnimigoSuportadoPorGelo" project="PuzzlePets" 
-    file="/PuzzlePets/src/pt/ipleiria/estg/dei/puzzlepets/EnimigoSuportadoPorGelo.java" binary="false" 
+  <class id="2" language="java" name="Suportes.SuporteGelo" project="2130664_RubenBernardo_2130774_RicardoVicente" 
+    file="/2130664_RubenBernardo_2130774_RicardoVicente/src/Suportes/SuporteGelo.java" binary="false" 
     corner="BOTTOM_RIGHT">    
-    <position height="81" width="173" x="41" y="2203"/>    
+    <position height="-1" width="-1" x="462" y="1786"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <enumeration id="19" language="java" name="pt.ipleiria.estg.dei.puzzlepets.Sentido" project="PuzzlePets" 
-    file="/PuzzlePets/src/pt/ipleiria/estg/dei/puzzlepets/Sentido.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="405" width="179" x="1114" y="999"/>    
+  <class id="3" language="java" name="Suportes.SuporteComSuportado" 
+    project="2130664_RubenBernardo_2130774_RicardoVicente" 
+    file="/2130664_RubenBernardo_2130774_RicardoVicente/src/Suportes/SuporteComSuportado.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="279" width="297" x="275" y="1444"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="4" language="java" name="Suportes.SuporteAgua" project="2130664_RubenBernardo_2130774_RicardoVicente" 
+    file="/2130664_RubenBernardo_2130774_RicardoVicente/src/Suportes/SuporteAgua.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="675" y="1766"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="5" language="java" name="Suportes.SuporteAr" project="2130664_RubenBernardo_2130774_RicardoVicente" 
+    file="/2130664_RubenBernardo_2130774_RicardoVicente/src/Suportes/SuporteAr.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="117" width="297" x="612" y="1444"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="6" language="java" name="Suportados.Movivel" project="2130664_RubenBernardo_2130774_RicardoVicente" 
+    file="/2130664_RubenBernardo_2130774_RicardoVicente/src/Suportados/Movivel.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="773" y="1895"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="7" language="java" name="Suportados.Maca" project="2130664_RubenBernardo_2130774_RicardoVicente" 
+    file="/2130664_RubenBernardo_2130774_RicardoVicente/src/Suportados/Maca.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="872" y="1654"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="8" language="java" name="Suportados.Representavel" project="2130664_RubenBernardo_2130774_RicardoVicente" 
+    file="/2130664_RubenBernardo_2130774_RicardoVicente/src/Suportados/Representavel.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="275" y="1204"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="9" language="java" name="Suportados.SuportadoPorGelo" 
+    project="2130664_RubenBernardo_2130774_RicardoVicente" 
+    file="/2130664_RubenBernardo_2130774_RicardoVicente/src/Suportados/SuportadoPorGelo.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="639" y="1966"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="10" language="java" name="Suportados.Animal" project="2130664_RubenBernardo_2130774_RicardoVicente" 
+    file="/2130664_RubenBernardo_2130774_RicardoVicente/src/Suportados/Animal.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1147" y="2143"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="11" language="java" name="Suportados.Suportado" project="2130664_RubenBernardo_2130774_RicardoVicente" 
+    file="/2130664_RubenBernardo_2130774_RicardoVicente/src/Suportados/Suportado.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="257" y="1871"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="12" language="java" name="Suportados.Combinavel" project="2130664_RubenBernardo_2130774_RicardoVicente" 
+    file="/2130664_RubenBernardo_2130774_RicardoVicente/src/Suportados/Combinavel.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="691" y="2120"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="13" language="java" name="Suportados.Cesto" project="2130664_RubenBernardo_2130774_RicardoVicente" 
+    file="/2130664_RubenBernardo_2130774_RicardoVicente/src/Suportados/Cesto.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="457" y="1973"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <enumeration id="14" language="java" name="pt.ipleiria.estg.dei.puzzlepets.TipoAnimal" 
+    project="2130664_RubenBernardo_2130774_RicardoVicente" 
+    file="/2130664_RubenBernardo_2130774_RicardoVicente/src/pt/ipleiria/estg/dei/puzzlepets/TipoAnimal.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="448" y="2682"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </enumeration>  
-  <class id="20" language="java" name="pt.ipleiria.estg.dei.puzzlepets.Posicao" project="PuzzlePets" 
-    file="/PuzzlePets/src/pt/ipleiria/estg/dei/puzzlepets/Posicao.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="315" width="190" x="1103" y="1444"/>    
+  <class id="15" language="java" name="pt.ipleiria.estg.dei.puzzlepets.Enimigo" 
+    project="2130664_RubenBernardo_2130774_RicardoVicente" 
+    file="/2130664_RubenBernardo_2130774_RicardoVicente/src/pt/ipleiria/estg/dei/puzzlepets/Enimigo.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="157" y="2009"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="21" language="java" name="pt.ipleiria.estg.dei.puzzlepets.Janela" project="PuzzlePets" 
-    file="/PuzzlePets/src/pt/ipleiria/estg/dei/puzzlepets/Janela.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="135" width="136" x="721" y="37"/>    
+  <class id="16" language="java" name="pt.ipleiria.estg.dei.puzzlepets.Jogo" 
+    project="2130664_RubenBernardo_2130774_RicardoVicente" 
+    file="/2130664_RubenBernardo_2130774_RicardoVicente/src/pt/ipleiria/estg/dei/puzzlepets/Jogo.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1804" y="749"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="22" language="java" name="pt.ipleiria.estg.dei.puzzlepets.Temporizador" project="PuzzlePets" 
-    file="/PuzzlePets/src/pt/ipleiria/estg/dei/puzzlepets/Temporizador.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="171" width="168" x="732" y="1992"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </class>  
-  <class id="23" language="java" name="Poderes.PoderCruz" project="PuzzlePets" 
-    file="/PuzzlePets/src/Poderes/PoderCruz.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="117" width="191" x="1092" y="2710"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </class>  
-  <class id="24" language="java" name="Poderes.Poder" project="PuzzlePets" file="/PuzzlePets/src/Poderes/Poder.java" 
+  <class id="17" language="java" name="pt.ipleiria.estg.dei.puzzlepets.EnimigoSuportadoPorGelo" 
+    project="2130664_RubenBernardo_2130774_RicardoVicente" 
+    file="/2130664_RubenBernardo_2130774_RicardoVicente/src/pt/ipleiria/estg/dei/puzzlepets/EnimigoSuportadoPorGelo.java" 
     binary="false" corner="BOTTOM_RIGHT">    
-    <position height="81" width="87" x="590" y="2360"/>    
+    <position height="-1" width="-1" x="157" y="2139"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="25" language="java" name="Poderes.PoderArcoIris" project="PuzzlePets" 
-    file="/PuzzlePets/src/Poderes/PoderArcoIris.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="117" width="191" x="359" y="2553"/>    
+  <enumeration id="18" language="java" name="pt.ipleiria.estg.dei.puzzlepets.Sentido" 
+    project="2130664_RubenBernardo_2130774_RicardoVicente" 
+    file="/2130664_RubenBernardo_2130774_RicardoVicente/src/pt/ipleiria/estg/dei/puzzlepets/Sentido.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1546" y="1347"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </enumeration>  
+  <class id="19" language="java" name="pt.ipleiria.estg.dei.puzzlepets.Posicao" 
+    project="2130664_RubenBernardo_2130774_RicardoVicente" 
+    file="/2130664_RubenBernardo_2130774_RicardoVicente/src/pt/ipleiria/estg/dei/puzzlepets/Posicao.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1317" y="1304"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="26" language="java" name="Poderes.PoderComAnimal" project="PuzzlePets" 
-    file="/PuzzlePets/src/Poderes/PoderComAnimal.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="117" width="202" x="590" y="2553"/>    
+  <class id="20" language="java" name="pt.ipleiria.estg.dei.puzzlepets.Janela" 
+    project="2130664_RubenBernardo_2130774_RicardoVicente" 
+    file="/2130664_RubenBernardo_2130774_RicardoVicente/src/pt/ipleiria/estg/dei/puzzlepets/Janela.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="608" y="637"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="27" language="java" name="Poderes.PoderMovimentoExtra" project="PuzzlePets" 
-    file="/PuzzlePets/src/Poderes/PoderMovimentoExtra.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="81" width="150" x="275" y="999"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </class>  
-  <class id="28" language="java" name="Poderes.PoderVertical" project="PuzzlePets" 
-    file="/PuzzlePets/src/Poderes/PoderVertical.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="117" width="191" x="630" y="2710"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </class>  
-  <class id="29" language="java" name="Poderes.PoderEstrela" project="PuzzlePets" 
-    file="/PuzzlePets/src/Poderes/PoderEstrela.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="117" width="191" x="861" y="2710"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </class>  
-  <class id="30" language="java" name="Poderes.PoderHorizontal" project="PuzzlePets" 
-    file="/PuzzlePets/src/Poderes/PoderHorizontal.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="117" width="191" x="378" y="2710"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </class>  
-  <class id="31" language="java" name="Paineis.PainelMacas" project="PuzzlePets" 
-    file="/PuzzlePets/src/Paineis/PainelMacas.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="99" width="166" x="1354" y="999"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </class>  
-  <class id="32" language="java" name="Paineis.PainelPrincipal" project="PuzzlePets" 
-    file="/PuzzlePets/src/Paineis/PainelPrincipal.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="747" width="343" x="1158" y="212"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </class>  
-  <class id="33" language="java" name="Paineis.PainelValorImagem" project="PuzzlePets" 
-    file="/PuzzlePets/src/Paineis/PainelValorImagem.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="225" width="240" x="1541" y="212"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </class>  
-  <class id="34" language="java" name="Paineis.Painel" project="PuzzlePets" file="/PuzzlePets/src/Paineis/Painel.java" 
+  <class id="21" language="java" name="pt.ipleiria.estg.dei.puzzlepets.Temporizador" 
+    project="2130664_RubenBernardo_2130774_RicardoVicente" 
+    file="/2130664_RubenBernardo_2130774_RicardoVicente/src/pt/ipleiria/estg/dei/puzzlepets/Temporizador.java" 
     binary="false" corner="BOTTOM_RIGHT">    
-    <position height="99" width="108" x="1576" y="37"/>    
+    <position height="-1" width="-1" x="940" y="1819"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="35" language="java" name="Paineis.PainelMovimentosEstrelas" project="PuzzlePets" 
-    file="/PuzzlePets/src/Paineis/PainelMovimentosEstrelas.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="153" width="232" x="1541" y="1444"/>    
+  <class id="22" language="java" name="Poderes.PoderCruz" project="2130664_RubenBernardo_2130774_RicardoVicente" 
+    file="/2130664_RubenBernardo_2130774_RicardoVicente/src/Poderes/PoderCruz.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="905" y="2484"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="36" language="java" name="Paineis.PainelPontuacao" project="PuzzlePets" 
-    file="/PuzzlePets/src/Paineis/PainelPontuacao.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="153" width="232" x="1813" y="1444"/>    
+  <class id="23" language="java" name="Poderes.Poder" project="2130664_RubenBernardo_2130774_RicardoVicente" 
+    file="/2130664_RubenBernardo_2130774_RicardoVicente/src/Poderes/Poder.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="527" y="2102"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <interface id="37" language="java" name="Interfaces.Iteravel" project="PuzzlePets" 
-    file="/PuzzlePets/src/Interfaces/Iteravel.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="81" width="103" x="235" y="2710"/>    
+  <class id="24" language="java" name="Poderes.PoderArcoIris" project="2130664_RubenBernardo_2130774_RicardoVicente" 
+    file="/2130664_RubenBernardo_2130774_RicardoVicente/src/Poderes/PoderArcoIris.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="463" y="2255"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="25" language="java" name="Poderes.PoderComAnimal" project="2130664_RubenBernardo_2130774_RicardoVicente" 
+    file="/2130664_RubenBernardo_2130774_RicardoVicente/src/Poderes/PoderComAnimal.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="689" y="2262"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="26" language="java" name="Poderes.PoderMovimentoExtra" 
+    project="2130664_RubenBernardo_2130774_RicardoVicente" 
+    file="/2130664_RubenBernardo_2130774_RicardoVicente/src/Poderes/PoderMovimentoExtra.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="362" y="1365"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="27" language="java" name="Poderes.PoderVertical" project="2130664_RubenBernardo_2130774_RicardoVicente" 
+    file="/2130664_RubenBernardo_2130774_RicardoVicente/src/Poderes/PoderVertical.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="698" y="2486"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="28" language="java" name="Poderes.PoderEstrela" project="2130664_RubenBernardo_2130774_RicardoVicente" 
+    file="/2130664_RubenBernardo_2130774_RicardoVicente/src/Poderes/PoderEstrela.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="897" y="2265"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="29" language="java" name="Poderes.PoderHorizontal" project="2130664_RubenBernardo_2130774_RicardoVicente" 
+    file="/2130664_RubenBernardo_2130774_RicardoVicente/src/Poderes/PoderHorizontal.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="466" y="2489"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="30" language="java" name="Paineis.PainelMacas" project="2130664_RubenBernardo_2130774_RicardoVicente" 
+    file="/2130664_RubenBernardo_2130774_RicardoVicente/src/Paineis/PainelMacas.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1198" y="751"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="31" language="java" name="Paineis.PainelPrincipal" project="2130664_RubenBernardo_2130774_RicardoVicente" 
+    file="/2130664_RubenBernardo_2130774_RicardoVicente/src/Paineis/PainelPrincipal.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="912" y="931"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="32" language="java" name="Paineis.PainelValorImagem" project="2130664_RubenBernardo_2130774_RicardoVicente" 
+    file="/2130664_RubenBernardo_2130774_RicardoVicente/src/Paineis/PainelValorImagem.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1417" y="774"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="33" language="java" name="Paineis.Painel" project="2130664_RubenBernardo_2130774_RicardoVicente" 
+    file="/2130664_RubenBernardo_2130774_RicardoVicente/src/Paineis/Painel.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1185" y="602"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="34" language="java" name="Paineis.PainelMovimentosEstrelas" 
+    project="2130664_RubenBernardo_2130774_RicardoVicente" 
+    file="/2130664_RubenBernardo_2130774_RicardoVicente/src/Paineis/PainelMovimentosEstrelas.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1342" y="1044"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="35" language="java" name="Paineis.PainelPontuacao" project="2130664_RubenBernardo_2130774_RicardoVicente" 
+    file="/2130664_RubenBernardo_2130774_RicardoVicente/src/Paineis/PainelPontuacao.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1786" y="980"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <interface id="36" language="java" name="Interfaces.Iteravel" project="2130664_RubenBernardo_2130774_RicardoVicente" 
+    file="/2130664_RubenBernardo_2130774_RicardoVicente/src/Interfaces/Iteravel.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="419" y="2380"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </interface>  
-  <generalization id="38">    
+  <generalization id="37">    
     <end type="SOURCE" refId="12"/>    
     <end type="TARGET" refId="6"/>  
   </generalization>  
-  <generalization id="39">    
+  <generalization id="38">    
     <end type="SOURCE" refId="9"/>    
     <end type="TARGET" refId="6"/>  
   </generalization>  
-  <generalization id="40">    
+  <generalization id="39">    
     <end type="SOURCE" refId="7"/>    
     <end type="TARGET" refId="6"/>  
   </generalization>  
-  <generalization id="41">    
-    <end type="SOURCE" refId="24"/>    
+  <generalization id="40">    
+    <end type="SOURCE" refId="23"/>    
     <end type="TARGET" refId="12"/>  
   </generalization>  
-  <association id="42">    
-    <bendpoint x="1323" y="999"/>    
-    <bendpoint x="1323" y="1444"/>    
-    <bendpoint x="1323" y="1799"/>    
-    <bendpoint x="1323" y="1992"/>    
-    <end type="SOURCE" refId="32" navigable="false">      
-      <attribute id="43" name="combinacao"/>      
-      <multiplicity id="44" minimum="0" maximum="2147483647"/>    
+  <association id="41">    
+    <bendpoint x="1169" y="999"/>    
+    <bendpoint x="1169" y="1444"/>    
+    <bendpoint x="1169" y="1799"/>    
+    <bendpoint x="1127" y="1992"/>    
+    <end type="SOURCE" refId="31" navigable="false">      
+      <attribute id="42" name="combinacao"/>      
+      <multiplicity id="43" minimum="0" maximum="2147483647"/>    
     </end>    
     <end type="TARGET" refId="12" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <association id="45">    
-    <end type="SOURCE" refId="19" navigable="false">      
-      <attribute id="46" name="delta"/>      
-      <multiplicity id="47" minimum="0" maximum="1"/>    
+  <association id="44">    
+    <end type="SOURCE" refId="18" navigable="false">      
+      <attribute id="45" name="delta"/>      
+      <multiplicity id="46" minimum="0" maximum="1"/>    
     </end>    
-    <end type="TARGET" refId="20" navigable="true"/>    
+    <end type="TARGET" refId="19" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
+  <generalization id="47">    
+    <bendpoint x="576" y="2191"/>    
+    <end type="SOURCE" refId="25"/>    
+    <end type="TARGET" refId="23"/>  
+  </generalization>  
   <generalization id="48">    
-    <end type="SOURCE" refId="26"/>    
-    <end type="TARGET" refId="24"/>  
+    <end type="SOURCE" refId="29"/>    
+    <end type="TARGET" refId="25"/>  
   </generalization>  
   <generalization id="49">    
-    <end type="SOURCE" refId="30"/>    
-    <end type="TARGET" refId="26"/>  
+    <end type="SOURCE" refId="31"/>    
+    <end type="TARGET" refId="33"/>  
   </generalization>  
-  <generalization id="50">    
-    <end type="SOURCE" refId="32"/>    
-    <end type="TARGET" refId="34"/>  
-  </generalization>  
-  <association id="51">    
+  <association id="50">    
     <end type="SOURCE" refId="11" navigable="false">      
-      <attribute id="52" name="suporte"/>      
-      <multiplicity id="53" minimum="0" maximum="1"/>    
+      <attribute id="51" name="suporte"/>      
+      <multiplicity id="52" minimum="0" maximum="1"/>    
     </end>    
     <end type="TARGET" refId="3" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <association id="54">    
-    <end type="SOURCE" refId="17" navigable="false">      
-      <attribute id="55" name="painelMovimentosEstrelas"/>      
-      <multiplicity id="56" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="35" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="57">    
-    <bendpoint x="930" y="1799"/>    
-    <bendpoint x="930" y="1992"/>    
-    <end type="SOURCE" refId="5" navigable="false">      
-      <attribute id="58" name="maca"/>      
-      <multiplicity id="59" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="7" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="60">    
-    <end type="SOURCE" refId="17" navigable="false">      
-      <attribute id="61" name="painelPontuacao"/>      
-      <multiplicity id="62" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="36" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="63">    
-    <bendpoint x="1313" y="2553"/>    
-    <bendpoint x="1313" y="2710"/>    
-    <end type="SOURCE" refId="10" navigable="false">      
-      <attribute id="64" name="tipoAnimal"/>      
-      <multiplicity id="65" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="15" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <generalization id="66">    
-    <end type="SOURCE" refId="28"/>    
-    <end type="TARGET" refId="26"/>  
-  </generalization>  
-  <generalization id="67">    
-    <end type="SOURCE" refId="5"/>    
-    <end type="TARGET" refId="1"/>  
-  </generalization>  
-  <generalization id="68">    
-    <end type="SOURCE" refId="4"/>    
-    <end type="TARGET" refId="3"/>  
-  </generalization>  
-  <association id="69">    
-    <end type="SOURCE" refId="32" navigable="false">      
-      <attribute id="70" name="jogo"/>      
-      <multiplicity id="71" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="17" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="72">    
-    <bendpoint x="1811" y="212"/>    
-    <end type="SOURCE" refId="17" navigable="false">      
-      <attribute id="73" name="painelPrincipal"/>      
-      <multiplicity id="74" minimum="0" maximum="1"/>    
+  <association id="53">    
+    <end type="SOURCE" refId="16" navigable="false">      
+      <attribute id="54" name="painelMovimentosEstrelas"/>      
+      <multiplicity id="55" minimum="0" maximum="1"/>    
     </end>    
     <end type="TARGET" refId="34" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <generalization id="75">    
-    <end type="SOURCE" refId="31"/>    
-    <end type="TARGET" refId="33"/>  
-  </generalization>  
-  <realization id="76">    
-    <bendpoint x="244" y="1992"/>    
-    <bendpoint x="244" y="2203"/>    
-    <bendpoint x="244" y="2360"/>    
-    <bendpoint x="244" y="2553"/>    
-    <end type="SOURCE" refId="11"/>    
-    <end type="TARGET" refId="37"/>  
-  </realization>  
-  <generalization id="77">    
-    <end type="SOURCE" refId="2"/>    
-    <end type="TARGET" refId="3"/>  
-  </generalization>  
-  <generalization id="78">    
-    <end type="SOURCE" refId="6"/>    
-    <end type="TARGET" refId="11"/>  
-  </generalization>  
-  <association id="79">    
-    <end type="SOURCE" refId="33" navigable="false">      
-      <attribute id="80" name="jogo"/>      
-      <multiplicity id="81" minimum="0" maximum="1"/>    
+  <association id="56">    
+    <end type="SOURCE" refId="5" navigable="false">      
+      <attribute id="57" name="maca"/>      
+      <multiplicity id="58" minimum="0" maximum="1"/>    
     </end>    
-    <end type="TARGET" refId="17" navigable="true"/>    
+    <end type="TARGET" refId="7" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <generalization id="82">    
-    <end type="SOURCE" refId="29"/>    
-    <end type="TARGET" refId="26"/>  
-  </generalization>  
-  <generalization id="83">    
-    <bendpoint x="244" y="1444"/>    
-    <bendpoint x="244" y="999"/>    
-    <end type="SOURCE" refId="11"/>    
-    <end type="TARGET" refId="8"/>  
-  </generalization>  
-  <generalization id="84">    
-    <end type="SOURCE" refId="33"/>    
-    <end type="TARGET" refId="34"/>  
-  </generalization>  
-  <generalization id="85">    
-    <end type="SOURCE" refId="23"/>    
-    <end type="TARGET" refId="26"/>  
-  </generalization>  
-  <realization id="86">    
-    <end type="SOURCE" refId="25"/>    
-    <end type="TARGET" refId="37"/>  
-  </realization>  
-  <generalization id="87">    
+  <association id="59">    
+    <end type="SOURCE" refId="16" navigable="false">      
+      <attribute id="60" name="painelPontuacao"/>      
+      <multiplicity id="61" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="35" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="62">    
+    <bendpoint x="1156" y="2674"/>    
+    <end type="SOURCE" refId="10" navigable="false">      
+      <attribute id="63" name="tipoAnimal"/>      
+      <multiplicity id="64" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="14" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="65">    
     <end type="SOURCE" refId="27"/>    
-    <end type="TARGET" refId="8"/>  
+    <end type="TARGET" refId="25"/>  
   </generalization>  
-  <generalization id="88">    
-    <end type="SOURCE" refId="3"/>    
+  <generalization id="66">    
+    <end type="SOURCE" refId="5"/>    
     <end type="TARGET" refId="1"/>  
   </generalization>  
-  <generalization id="89">    
-    <end type="SOURCE" refId="10"/>    
-    <end type="TARGET" refId="12"/>  
+  <generalization id="67">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="3"/>  
   </generalization>  
-  <realization id="90">    
-    <end type="SOURCE" refId="26"/>    
-    <end type="TARGET" refId="37"/>  
-  </realization>  
-  <generalization id="91">    
-    <end type="SOURCE" refId="16"/>    
-    <end type="TARGET" refId="11"/>  
-  </generalization>  
-  <generalization id="92">    
-    <end type="SOURCE" refId="25"/>    
-    <end type="TARGET" refId="24"/>  
-  </generalization>  
-  <association id="93">    
-    <bendpoint x="1083" y="999"/>    
-    <end type="SOURCE" refId="32" navigable="false">      
-      <attribute id="94" name="posicaoInicial"/>      
-      <multiplicity id="95" minimum="0" maximum="1"/>    
+  <association id="68">    
+    <bendpoint x="1255" y="962"/>    
+    <bendpoint x="1606" y="915"/>    
+    <end type="SOURCE" refId="31" navigable="false">      
+      <attribute id="69" name="jogo"/>      
+      <multiplicity id="70" minimum="0" maximum="1"/>    
     </end>    
-    <end type="TARGET" refId="20" navigable="true"/>    
+    <end type="TARGET" refId="16" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <association id="96">    
-    <end type="SOURCE" refId="3" navigable="false">      
-      <attribute id="97" name="suportado"/>      
-      <multiplicity id="98" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="11" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="99">    
-    <end type="SOURCE" refId="1" navigable="false">      
-      <attribute id="100" name="posicao"/>      
-      <multiplicity id="101" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="20" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <generalization id="102">    
-    <end type="SOURCE" refId="1"/>    
-    <end type="TARGET" refId="8"/>  
-  </generalization>  
-  <generalization id="103">    
-    <bendpoint x="1861" y="999"/>    
-    <end type="SOURCE" refId="36"/>    
-    <end type="TARGET" refId="33"/>  
-  </generalization>  
-  <association id="104">    
-    <end type="SOURCE" refId="30" navigable="false">      
-      <attribute id="105" name="tipo"/>      
-      <multiplicity id="106" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="15" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="107">    
-    <end type="SOURCE" refId="11" navigable="false">      
-      <attribute id="108" name="temporizador"/>      
-      <multiplicity id="109" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="22" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="110">    
-    <bendpoint x="909" y="1799"/>    
-    <end type="SOURCE" refId="3" navigable="false">      
-      <attribute id="111" name="temporizador"/>      
-      <multiplicity id="112" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="22" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="113">    
-    <end type="SOURCE" refId="14" navigable="false">      
-      <attribute id="114" name="elementos"/>      
-      <multiplicity id="115" minimum="0" maximum="2147483647"/>    
-    </end>    
-    <end type="TARGET" refId="12" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="116">    
-    <end type="SOURCE" refId="17" navigable="false">      
-      <attribute id="117" name="painelMacas"/>      
-      <multiplicity id="118" minimum="0" maximum="1"/>    
+  <association id="71">    
+    <bendpoint x="1451" y="604"/>    
+    <end type="SOURCE" refId="16" navigable="false">      
+      <attribute id="72" name="painelPrincipal"/>      
+      <multiplicity id="73" minimum="0" maximum="1"/>    
     </end>    
     <end type="TARGET" refId="33" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <generalization id="119">    
-    <end type="SOURCE" refId="13"/>    
+  <generalization id="74">    
+    <end type="SOURCE" refId="30"/>    
+    <end type="TARGET" refId="32"/>  
+  </generalization>  
+  <realization id="75">    
+    <bendpoint x="308" y="2300"/>    
+    <end type="SOURCE" refId="11"/>    
+    <end type="TARGET" refId="36"/>  
+  </realization>  
+  <generalization id="76">    
+    <end type="SOURCE" refId="2"/>    
+    <end type="TARGET" refId="3"/>  
+  </generalization>  
+  <generalization id="77">    
+    <end type="SOURCE" refId="6"/>    
     <end type="TARGET" refId="11"/>  
   </generalization>  
-  <association id="120">    
-    <bendpoint x="599" y="2710"/>    
-    <end type="SOURCE" refId="26" navigable="false">      
-      <attribute id="121" name="tipoAnimal"/>      
-      <multiplicity id="122" minimum="0" maximum="1"/>    
+  <association id="78">    
+    <end type="SOURCE" refId="32" navigable="false">      
+      <attribute id="79" name="jogo"/>      
+      <multiplicity id="80" minimum="0" maximum="1"/>    
     </end>    
-    <end type="TARGET" refId="15" navigable="true"/>    
+    <end type="TARGET" refId="16" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <generalization id="123">    
-    <bendpoint x="1550" y="999"/>    
-    <end type="SOURCE" refId="35"/>    
+  <generalization id="81">    
+    <end type="SOURCE" refId="28"/>    
+    <end type="TARGET" refId="25"/>  
+  </generalization>  
+  <generalization id="82">    
+    <end type="SOURCE" refId="11"/>    
+    <end type="TARGET" refId="8"/>  
+  </generalization>  
+  <generalization id="83">    
+    <end type="SOURCE" refId="32"/>    
     <end type="TARGET" refId="33"/>  
   </generalization>  
-  <association id="124">    
+  <generalization id="84">    
+    <end type="SOURCE" refId="22"/>    
+    <end type="TARGET" refId="25"/>  
+  </generalization>  
+  <realization id="85">    
+    <end type="SOURCE" refId="24"/>    
+    <end type="TARGET" refId="36"/>  
+  </realization>  
+  <generalization id="86">    
+    <end type="SOURCE" refId="26"/>    
+    <end type="TARGET" refId="8"/>  
+  </generalization>  
+  <generalization id="87">    
+    <end type="SOURCE" refId="3"/>    
+    <end type="TARGET" refId="1"/>  
+  </generalization>  
+  <generalization id="88">    
+    <end type="SOURCE" refId="10"/>    
+    <end type="TARGET" refId="12"/>  
+  </generalization>  
+  <realization id="89">    
+    <end type="SOURCE" refId="25"/>    
+    <end type="TARGET" refId="36"/>  
+  </realization>  
+  <generalization id="90">    
+    <end type="SOURCE" refId="15"/>    
+    <end type="TARGET" refId="11"/>  
+  </generalization>  
+  <generalization id="91">    
+    <end type="SOURCE" refId="24"/>    
+    <end type="TARGET" refId="23"/>  
+  </generalization>  
+  <association id="92">    
+    <end type="SOURCE" refId="31" navigable="false">      
+      <attribute id="93" name="posicaoInicial"/>      
+      <multiplicity id="94" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="19" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="95">    
+    <end type="SOURCE" refId="3" navigable="false">      
+      <attribute id="96" name="suportado"/>      
+      <multiplicity id="97" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="11" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="98">    
     <end type="SOURCE" refId="1" navigable="false">      
-      <attribute id="125" name="painelPrincipal"/>      
-      <multiplicity id="126" minimum="0" maximum="1"/>    
+      <attribute id="99" name="posicao"/>      
+      <multiplicity id="100" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="19" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="101">    
+    <end type="SOURCE" refId="1"/>    
+    <end type="TARGET" refId="8"/>  
+  </generalization>  
+  <generalization id="102">    
+    <end type="SOURCE" refId="35"/>    
+    <end type="TARGET" refId="32"/>  
+  </generalization>  
+  <association id="103">    
+    <end type="SOURCE" refId="29" navigable="false">      
+      <attribute id="104" name="tipo"/>      
+      <multiplicity id="105" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="14" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="106">    
+    <end type="SOURCE" refId="11" navigable="false">      
+      <attribute id="107" name="temporizador"/>      
+      <multiplicity id="108" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="21" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="109">    
+    <bendpoint x="736" y="1682"/>    
+    <end type="SOURCE" refId="3" navigable="false">      
+      <attribute id="110" name="temporizador"/>      
+      <multiplicity id="111" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="21" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="112">    
+    <end type="SOURCE" refId="16" navigable="false">      
+      <attribute id="113" name="painelMacas"/>      
+      <multiplicity id="114" minimum="0" maximum="1"/>    
     </end>    
     <end type="TARGET" refId="32" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <association id="127">    
-    <end type="SOURCE" refId="32" navigable="false">      
-      <attribute id="128" name="matriz"/>      
-      <multiplicity id="129" minimum="0" maximum="2147483647"/>    
+  <generalization id="115">    
+    <end type="SOURCE" refId="13"/>    
+    <end type="TARGET" refId="11"/>  
+  </generalization>  
+  <association id="116">    
+    <bendpoint x="585" y="2426"/>    
+    <bendpoint x="585" y="2563"/>    
+    <end type="SOURCE" refId="25" navigable="false">      
+      <attribute id="117" name="tipoAnimal"/>      
+      <multiplicity id="118" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="14" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="119">    
+    <end type="SOURCE" refId="34"/>    
+    <end type="TARGET" refId="32"/>  
+  </generalization>  
+  <association id="120">    
+    <end type="SOURCE" refId="1" navigable="false">      
+      <attribute id="121" name="painelPrincipal"/>      
+      <multiplicity id="122" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="31" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="123">    
+    <end type="SOURCE" refId="31" navigable="false">      
+      <attribute id="124" name="matriz"/>      
+      <multiplicity id="125" minimum="0" maximum="2147483647"/>    
     </end>    
     <end type="TARGET" refId="1" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <generalization id="130">    
-    <end type="SOURCE" refId="18"/>    
-    <end type="TARGET" refId="16"/>  
+  <generalization id="126">    
+    <end type="SOURCE" refId="17"/>    
+    <end type="TARGET" refId="15"/>  
   </generalization>  
   <classifier-display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
     sort-features="false" accessors="true" visibility="true">    
